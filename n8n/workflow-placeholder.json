@@ -1,0 +1,391 @@
+{
+  "name": "Telegram Lead Capture System - Demo Placeholder",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "telegram-trigger-demo",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1600,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{ $json.message.chat.type }}",
+              "rightValue": "private",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-private-chat-demo",
+      "name": "IF Private Chat",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -1380,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const msg = $json.message || {};\nconst chat = msg.chat || {};\nconst from = msg.from || {};\n\nreturn [{\n  json: {\n    source: 'telegram_bot',\n    chat_id: chat.id,\n    user_id: from.id || null,\n    text: msg.text || '',\n    username: from.username || chat.username || null,\n    first_name: from.first_name || chat.first_name || null,\n    last_name: from.last_name || chat.last_name || null\n  }\n}];"
+      },
+      "id": "normalize-telegram-demo",
+      "name": "Normalize Telegram Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1140,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT crm_process_tg_message('{{ JSON.stringify($json).replace(/'/g, \"''\") }}'::jsonb) AS result;",
+        "options": {}
+      },
+      "id": "process-telegram-postgres-demo",
+      "name": "Process Telegram in PostgreSQL",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        -900,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const r = $json.result || {};\nreturn [{\n  json: {\n    chat_id: r.chat_id || $('Normalize Telegram Message').item.json.chat_id,\n    reply_text: r.public_message || r.reply_text || 'Processing error.',\n    notify_owner: !!r.notify_owner,\n    owner_chat_id: r.owner_chat_id || null,\n    owner_group_chat_id: r.owner_group_chat_id || null,\n    owner_text: r.owner_text || null\n  }\n}];"
+      },
+      "id": "prepare-telegram-replies-demo",
+      "name": "Prepare Telegram Replies",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chat_id }}",
+        "text": "={{ $json.reply_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-reply-user-demo",
+      "name": "Send Reply to User",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -420,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $('Prepare Telegram Replies').item.json.notify_owner }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if-notify-owner-demo",
+      "name": "IF Notify Owner",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Prepare Telegram Replies').item.json.owner_chat_id }}",
+        "text": "={{ $('Prepare Telegram Replies').item.json.owner_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-owner-notification-demo",
+      "name": "Send Owner Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $('Prepare Telegram Replies').item.json.owner_group_chat_id ? 1 : 0 }}",
+              "operation": "larger"
+            }
+          ]
+        }
+      },
+      "id": "if-has-work-group-demo",
+      "name": "IF Has Work Group",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        80,
+        190
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Prepare Telegram Replies').item.json.owner_group_chat_id }}",
+        "text": "={{ $('Prepare Telegram Replies').item.json.owner_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-work-group-notification-demo",
+      "name": "Send Work Group Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        340,
+        190
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-form",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "website-form-webhook-demo",
+      "name": "Website Form Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1600,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || $json || {};\n\nreturn [{\n  json: {\n    source: 'website_form',\n    client_slug: body.client_slug || 'demo-client',\n    product_type: body.product_type || null,\n    quantity: body.quantity || null,\n    delivery_address: body.delivery_address || null,\n    customer_name: body.customer_name || null,\n    customer_contact: body.customer_contact || null,\n    comment: body.comment || null,\n    page_url: body.page_url || null,\n    user_agent: $json.headers?.['user-agent'] || null,\n    personal_data_agree: body.personal_data_agree === true || body.personal_data_agree === 'true',\n    privacy_policy_url: body.privacy_policy_url || 'https://example.com/privacy.html',\n    consent_url: body.consent_url || 'https://example.com/consent.html'\n  }\n}];"
+      },
+      "id": "normalize-website-form-demo",
+      "name": "Normalize Website Form",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1360,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT crm_process_web_lead('{{ JSON.stringify($json).replace(/'/g, \"''\") }}'::jsonb) AS result;",
+        "options": {}
+      },
+      "id": "save-website-lead-postgres-demo",
+      "name": "Save Website Lead in PostgreSQL",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        -1120,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const r = $json.result || {};\nreturn [{\n  json: {\n    ok: !!r.ok,\n    message: r.message || r.public_message || 'Lead received.',\n    notify_owner: !!r.notify_owner,\n    owner_chat_id: r.owner_chat_id || null,\n    owner_group_chat_id: r.owner_group_chat_id || null,\n    owner_text: r.owner_text || null\n  }\n}];"
+      },
+      "id": "prepare-website-response-demo",
+      "name": "Prepare Website Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -880,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: $json.ok, message: $json.message } }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "respond-to-website-demo",
+      "name": "Respond to Website",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        -640,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $('Prepare Website Response').item.json.notify_owner }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if-website-notify-owner-demo",
+      "name": "IF Website Notify Owner",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Prepare Website Response').item.json.owner_chat_id }}",
+        "text": "={{ $('Prepare Website Response').item.json.owner_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-website-owner-notification-demo",
+      "name": "Send Website Owner Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -120,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $('Prepare Website Response').item.json.owner_group_chat_id ? 1 : 0 }}",
+              "operation": "larger"
+            }
+          ]
+        }
+      },
+      "id": "if-website-has-work-group-demo",
+      "name": "IF Website Has Work Group",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Prepare Website Response').item.json.owner_group_chat_id }}",
+        "text": "={{ $('Prepare Website Response').item.json.owner_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "send-website-work-group-notification-demo",
+      "name": "Send Website Work Group Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        160,
+        740
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [[{"node": "IF Private Chat", "type": "main", "index": 0}]]
+    },
+    "IF Private Chat": {
+      "main": [[{"node": "Normalize Telegram Message", "type": "main", "index": 0}], []]
+    },
+    "Normalize Telegram Message": {
+      "main": [[{"node": "Process Telegram in PostgreSQL", "type": "main", "index": 0}]]
+    },
+    "Process Telegram in PostgreSQL": {
+      "main": [[{"node": "Prepare Telegram Replies", "type": "main", "index": 0}]]
+    },
+    "Prepare Telegram Replies": {
+      "main": [[{"node": "Send Reply to User", "type": "main", "index": 0}]]
+    },
+    "Send Reply to User": {
+      "main": [[{"node": "IF Notify Owner", "type": "main", "index": 0}]]
+    },
+    "IF Notify Owner": {
+      "main": [[{"node": "Send Owner Notification", "type": "main", "index": 0}, {"node": "IF Has Work Group", "type": "main", "index": 0}], []]
+    },
+    "IF Has Work Group": {
+      "main": [[{"node": "Send Work Group Notification", "type": "main", "index": 0}], []]
+    },
+    "Website Form Webhook": {
+      "main": [[{"node": "Normalize Website Form", "type": "main", "index": 0}]]
+    },
+    "Normalize Website Form": {
+      "main": [[{"node": "Save Website Lead in PostgreSQL", "type": "main", "index": 0}]]
+    },
+    "Save Website Lead in PostgreSQL": {
+      "main": [[{"node": "Prepare Website Response", "type": "main", "index": 0}]]
+    },
+    "Prepare Website Response": {
+      "main": [[{"node": "Respond to Website", "type": "main", "index": 0}]]
+    },
+    "Respond to Website": {
+      "main": [[{"node": "IF Website Notify Owner", "type": "main", "index": 0}]]
+    },
+    "IF Website Notify Owner": {
+      "main": [[{"node": "Send Website Owner Notification", "type": "main", "index": 0}, {"node": "IF Website Has Work Group", "type": "main", "index": 0}], []]
+    },
+    "IF Website Has Work Group": {
+      "main": [[{"node": "Send Website Work Group Notification", "type": "main", "index": 0}], []]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    {
+      "name": "demo"
+    }
+  ]
+}
