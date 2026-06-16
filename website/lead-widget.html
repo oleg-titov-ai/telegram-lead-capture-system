@@ -1,0 +1,346 @@
+<!-- Lead Capture Widget -->
+<div class="lead-widget">
+  <button class="lead-main-btn" id="leadOpenBtn" type="button">
+    Submit Request
+  </button>
+
+  <div class="lead-panel" id="leadPanel">
+    <button class="lead-close" id="leadCloseBtn" type="button">×</button>
+
+    <div class="lead-title">Submit a request</div>
+    <div class="lead-subtitle">
+      Tell us what you need. A company specialist will contact you soon.
+    </div>
+
+    <a
+      class="lead-telegram-btn"
+      href="https://t.me/DEMO_BOT_USERNAME?start=demo-client"
+      target="_blank"
+      rel="noopener"
+    >
+      Continue in Telegram
+    </a>
+
+    <form class="lead-form" id="leadForm">
+      <input type="hidden" name="client_slug" value="demo-client">
+
+      <input name="product_type" placeholder="What do you need?" required>
+      <input name="quantity" placeholder="Quantity or volume" required>
+      <input name="delivery_address" placeholder="Delivery city or address" required>
+      <input name="customer_name" placeholder="Your name" required>
+      <input name="customer_contact" placeholder="Phone or Telegram" required>
+
+      <textarea name="comment" placeholder="Comment: specs, delivery time, details"></textarea>
+
+      <label class="lead-policy-check">
+        <input type="checkbox" name="personal_data_agree" required>
+        <span>
+          I agree to personal data processing and accept
+          <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+          and
+          <a href="/consent.html" target="_blank" rel="noopener">Personal Data Consent</a>.
+        </span>
+      </label>
+
+      <button class="lead-submit" type="submit">Send request</button>
+      <div class="lead-result" id="leadResult"></div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .lead-widget {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999999;
+    font-family: Arial, sans-serif;
+  }
+
+  .lead-main-btn {
+    position: relative;
+    background: linear-gradient(135deg, #1f5eff, #4da6ff, #00d4ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 24px 34px;
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow:
+      0 0 22px rgba(77,166,255,0.75),
+      0 0 45px rgba(31,94,255,0.55),
+      0 14px 34px rgba(0,0,0,0.45);
+    transition: 0.25s ease;
+    white-space: nowrap;
+    animation: leadButtonPulse 1.7s infinite ease-in-out;
+  }
+
+  .lead-main-btn::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 999px;
+    border: 2px solid rgba(77,166,255,0.55);
+    animation: leadButtonRing 1.7s infinite ease-out;
+    pointer-events: none;
+  }
+
+  .lead-main-btn::after {
+    content: "⚡";
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .lead-main-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow:
+      0 0 30px rgba(77,166,255,1),
+      0 0 65px rgba(31,94,255,0.75),
+      0 18px 42px rgba(0,0,0,0.55);
+  }
+
+  @keyframes leadButtonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes leadButtonRing {
+    0% { opacity: 0.75; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.35); }
+  }
+
+  .lead-panel {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 88px;
+    width: 370px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    padding: 18px;
+    color: #111111;
+  }
+
+  .lead-panel.open { display: block; }
+
+  .lead-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #111111;
+    padding-right: 24px;
+  }
+
+  .lead-subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555555;
+    margin-bottom: 14px;
+  }
+
+  .lead-telegram-btn {
+    display: block;
+    text-align: center;
+    background: #229ED9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .lead-telegram-btn:hover { background: #1689c4; }
+
+  .lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .lead-form input,
+  .lead-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 9px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    color: #111111;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .lead-form input:focus,
+  .lead-form textarea:focus { border-color: #1f5eff; }
+
+  .lead-form textarea {
+    min-height: 70px;
+    resize: vertical;
+  }
+
+  .lead-policy-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #333333;
+    margin-top: 2px;
+  }
+
+  .lead-policy-check input {
+    width: auto;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .lead-policy-check a {
+    color: #1f5eff;
+    text-decoration: underline;
+  }
+
+  .lead-submit {
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .lead-submit:hover { background: #222222; }
+
+  .lead-result {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #333333;
+    line-height: 1.35;
+  }
+
+  .lead-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #777777;
+  }
+
+  .lead-close:hover { color: #111111; }
+
+  @media (max-width: 768px) {
+    .lead-widget {
+      right: 16px;
+      left: 16px;
+      top: auto;
+      bottom: 18px;
+      transform: none;
+    }
+
+    .lead-main-btn {
+      width: 100%;
+      border-radius: 16px;
+      padding: 20px 24px;
+      font-size: 21px;
+    }
+
+    .lead-panel {
+      position: fixed;
+      right: 16px;
+      left: 16px;
+      top: auto;
+      bottom: 92px;
+      width: auto;
+      max-height: 75vh;
+      overflow-y: auto;
+    }
+  }
+</style>
+
+<script>
+  const leadOpenBtn = document.getElementById('leadOpenBtn');
+  const leadCloseBtn = document.getElementById('leadCloseBtn');
+  const leadPanel = document.getElementById('leadPanel');
+  const leadForm = document.getElementById('leadForm');
+  const leadResult = document.getElementById('leadResult');
+
+  leadOpenBtn.addEventListener('click', function (event) {
+    event.stopPropagation();
+    leadPanel.classList.toggle('open');
+  });
+
+  leadCloseBtn.addEventListener('click', function (event) {
+    event.stopPropagation();
+    leadPanel.classList.remove('open');
+  });
+
+  leadPanel.addEventListener('click', function (event) {
+    event.stopPropagation();
+  });
+
+  document.addEventListener('click', function () {
+    leadPanel.classList.remove('open');
+  });
+
+  leadForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+
+    if (!form.personal_data_agree.checked) {
+      leadResult.innerText = 'Personal data processing consent is required.';
+      return;
+    }
+
+    const data = {
+      client_slug: form.client_slug.value,
+      product_type: form.product_type.value,
+      quantity: form.quantity.value,
+      delivery_address: form.delivery_address.value,
+      customer_name: form.customer_name.value,
+      customer_contact: form.customer_contact.value,
+      comment: form.comment.value,
+      page_url: window.location.href,
+      user_agent: navigator.userAgent,
+      personal_data_agree: form.personal_data_agree.checked,
+      privacy_policy_url: window.location.origin + '/privacy.html',
+      consent_url: window.location.origin + '/consent.html'
+    };
+
+    leadResult.innerText = 'Sending request...';
+
+    try {
+      const response = await fetch('DEMO_WEBHOOK_URL', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const json = await response.json();
+
+      if (json.ok) {
+        leadResult.innerText = json.message || 'Thank you! Your request has been received.';
+        form.reset();
+      } else {
+        leadResult.innerText = json.message || 'Could not send request.';
+      }
+    } catch (error) {
+      leadResult.innerText = 'Sending error. Please try again later.';
+    }
+  });
+</script>
+<!-- /Lead Capture Widget -->
