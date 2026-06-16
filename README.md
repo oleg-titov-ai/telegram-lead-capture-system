@@ -36,6 +36,36 @@ This project is useful for **B2B, services, manufacturing, supply companies, con
 
 ---
 
+## 🖼️ Demo Screenshots
+
+### Website button
+
+![Website button](docs/screenshots/01-website-button.png)
+
+### Website lead form
+
+![Website lead form](docs/screenshots/02-website-form.png)
+
+### Telegram bot flow
+
+![Telegram bot flow](docs/screenshots/03-telegram-bot-flow.png)
+
+### Manager notification
+
+![Manager notification](docs/screenshots/04-manager-notification.png)
+
+### n8n workflow
+
+![n8n workflow](docs/screenshots/05-n8n-workflow.png)
+
+### PostgreSQL lead storage
+
+![PostgreSQL lead storage](docs/screenshots/06-postgresql-leads.png)
+
+More details: [`docs/demo-screenshots.md`](docs/demo-screenshots.md)
+
+---
+
 ## 🧩 Architecture
 
 ### Website form flow
@@ -102,10 +132,20 @@ telegram-lead-capture-system/
 ├── website/
 │   └── lead-widget.html
 ├── n8n/
-│   └── workflow-notes.md
+│   ├── workflow-notes.md
+│   └── workflow-placeholder.json
 └── docs/
     ├── architecture.md
-    └── setup-checklist.md
+    ├── setup-checklist.md
+    ├── security.md
+    ├── demo-screenshots.md
+    └── screenshots/
+        ├── 01-website-button.png
+        ├── 02-website-form.png
+        ├── 03-telegram-bot-flow.png
+        ├── 04-manager-notification.png
+        ├── 05-n8n-workflow.png
+        └── 06-postgresql-leads.png
 ```
 
 ---
@@ -147,6 +187,8 @@ Never commit:
 - `.env` files with secrets
 
 Use `.env.example` with demo placeholders instead.
+
+See: [`docs/security.md`](docs/security.md)
 
 ---
 
