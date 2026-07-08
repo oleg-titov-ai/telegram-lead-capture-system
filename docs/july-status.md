@@ -12,3 +12,4 @@
 - Add payload validation notes.
 - Keep privacy notes clear.
 - Keep the demo flow simple to explain.
+- Next pass: make the setup path easier for a new reviewer.
