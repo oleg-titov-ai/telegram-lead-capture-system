@@ -11,3 +11,4 @@
 - Clarify client setup.
 - Add payload validation notes.
 - Keep privacy notes clear.
+- Keep the demo flow simple to explain.
