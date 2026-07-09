@@ -15,3 +15,4 @@
 - Next pass: make the setup path easier for a new reviewer.
 - Evening pass: keep webhook setup notes clear without exposing credentials.
 - Morning pass: keep client onboarding notes focused on safe demo values.
+- Evening pass: keep review notes short.
