@@ -51,6 +51,7 @@ Use this checklist to deploy a demo or production version.
 ## 5. Final Test
 
 - [ ] Send a test website form request.
+- [ ] Confirm the website receives a clear success or error response.
 - [ ] Repeat the same submission and verify duplicate handling.
 - [ ] Check that the lead is saved in PostgreSQL.
 - [ ] Check that Telegram notification is sent.
