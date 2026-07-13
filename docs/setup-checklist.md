@@ -45,6 +45,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Replace `DEMO_BOT_USERNAME` with your Telegram bot username.
 - [ ] Replace `demo-client` with your real client slug.
 - [ ] Check privacy policy and consent links.
+- [ ] Validate maximum input lengths before submitting the form.
 
 ---
 
