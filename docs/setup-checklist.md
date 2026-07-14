@@ -56,6 +56,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Repeat the same submission and verify duplicate handling.
 - [ ] Check that the lead is saved in PostgreSQL.
 - [ ] Check that Telegram notification is sent.
+- [ ] Simulate a Telegram notification failure and verify the lead remains stored for retry.
 - [ ] Open Telegram bot with `/start demo-client`.
 - [ ] Complete the dialog.
 - [ ] Check that Telegram lead is saved.
