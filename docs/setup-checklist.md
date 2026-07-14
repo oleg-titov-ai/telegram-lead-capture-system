@@ -31,6 +31,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Create Telegram credentials in n8n.
 - [ ] Create or import the workflow.
 - [ ] Add website webhook node.
+- [ ] Confirm the webhook accepts only the intended HTTP method.
 - [ ] Add Telegram trigger node.
 - [ ] Add filter: process only private Telegram chats.
 - [ ] Test website form branch.
