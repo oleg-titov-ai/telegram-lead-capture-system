@@ -32,6 +32,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Create or import the workflow.
 - [ ] Add website webhook node.
 - [ ] Confirm the webhook accepts only the intended HTTP method.
+- [ ] Reject unexpected webhook content types before processing input.
 - [ ] Add Telegram trigger node.
 - [ ] Add filter: process only private Telegram chats.
 - [ ] Test website form branch.
