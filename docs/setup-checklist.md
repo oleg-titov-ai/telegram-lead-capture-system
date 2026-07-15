@@ -58,6 +58,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Send a test website form request.
 - [ ] Confirm the website receives a clear success or error response.
 - [ ] Record webhook response status codes in operational logs without storing form contents.
+- [ ] Include a non-sensitive request ID in logs to trace one submission across the workflow.
 - [ ] Confirm the widget handles a webhook timeout without losing entered form data.
 - [ ] Repeat the same submission and verify duplicate handling.
 - [ ] Check that the lead is saved in PostgreSQL.
