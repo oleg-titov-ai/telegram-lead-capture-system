@@ -52,3 +52,5 @@ Before uploading screenshots, blur or replace:
 - internal company data
 
 Use demo data only.
+
+Also remove image metadata before publishing screenshots from a personal device.
