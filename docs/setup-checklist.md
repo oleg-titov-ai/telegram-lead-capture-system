@@ -34,6 +34,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm the webhook accepts only the intended HTTP method.
 - [ ] Reject unexpected webhook content types before processing input.
 - [ ] Enforce a reasonable maximum webhook payload size.
+- [ ] Normalize and trim text fields before database writes and notifications.
 - [ ] Add Telegram trigger node.
 - [ ] Add filter: process only private Telegram chats.
 - [ ] Test website form branch.
