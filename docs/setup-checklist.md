@@ -54,6 +54,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Check privacy policy and consent links.
 - [ ] Verify consent status and timestamp are recorded with each website lead.
 - [ ] Validate maximum input lengths before submitting the form.
+- [ ] Verify labels, focus order, and error messages remain usable with keyboard navigation.
 
 ---
 
