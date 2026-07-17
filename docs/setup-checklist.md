@@ -11,6 +11,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Do not commit the bot token to GitHub.
 - [ ] Create a Telegram manager group.
 - [ ] Add the bot to the manager group.
+- [ ] Confirm the bot still has permission to post in the manager group after deployment changes.
 - [ ] Get demo or production chat IDs locally.
 
 ---
