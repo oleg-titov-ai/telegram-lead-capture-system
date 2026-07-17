@@ -53,6 +53,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Replace `demo-client` with your real client slug.
 - [ ] Check privacy policy and consent links.
 - [ ] Verify consent status and timestamp are recorded with each website lead.
+- [ ] Record the consent-text version so historical submissions remain auditable after policy updates.
 - [ ] Validate maximum input lengths before submitting the form.
 - [ ] Verify labels, focus order, and error messages remain usable with keyboard navigation.
 
