@@ -30,6 +30,7 @@ dist
 .serverless/
 .vite/
 *.tsbuildinfo
+coverage/
 
 # Environment files
 .env
