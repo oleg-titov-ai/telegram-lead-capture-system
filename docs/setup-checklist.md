@@ -70,6 +70,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Repeat the same submission and verify duplicate handling.
 - [ ] Check that the lead is saved in PostgreSQL.
 - [ ] Check that Telegram notification is sent.
+- [ ] Confirm manager notifications include only fields required for follow-up.
 - [ ] Simulate a Telegram notification failure and verify the lead remains stored for retry.
 - [ ] Confirm only one worker owns each notification retry attempt to prevent duplicate manager messages.
 - [ ] Confirm retryable notification failures are visible in operational status without exposing lead contents.
