@@ -66,6 +66,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm webhook responses disable caching so prior submission results are not reused.
 - [ ] Record webhook response status codes in operational logs without storing form contents.
 - [ ] Include a non-sensitive request ID in logs to trace one submission across the workflow.
+- [ ] Return the same non-sensitive request ID in the webhook response for support correlation.
 - [ ] Confirm duplicate request IDs are rejected or linked to the existing lead instead of creating another record.
 - [ ] Confirm the widget handles a webhook timeout without losing entered form data.
 - [ ] Repeat the same submission and verify duplicate handling.
