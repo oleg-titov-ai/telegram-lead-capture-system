@@ -70,6 +70,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm the widget handles a webhook timeout without losing entered form data.
 - [ ] Repeat the same submission and verify duplicate handling.
 - [ ] Check that the lead is saved in PostgreSQL.
+- [ ] Confirm stored lead timestamps use the documented application timezone.
 - [ ] Check that Telegram notification is sent.
 - [ ] Confirm manager notifications include only fields required for follow-up.
 - [ ] Simulate a Telegram notification failure and verify the lead remains stored for retry.
