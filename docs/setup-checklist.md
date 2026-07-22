@@ -76,6 +76,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm stored lead timestamps use the documented application timezone.
 - [ ] Check that Telegram notification is sent.
 - [ ] Confirm manager notifications include only fields required for follow-up.
+- [ ] Escape user-provided text before inserting it into Markdown or HTML-formatted manager notifications.
 - [ ] Simulate a Telegram notification failure and verify the lead remains stored for retry.
 - [ ] Confirm only one worker owns each notification retry attempt to prevent duplicate manager messages.
 - [ ] Confirm retryable notification failures are visible in operational status without exposing lead contents.
