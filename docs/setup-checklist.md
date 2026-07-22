@@ -35,6 +35,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm the webhook accepts only the intended HTTP method.
 - [ ] Reject unexpected webhook content types before processing input.
 - [ ] Enforce a reasonable maximum webhook payload size.
+- [ ] Log rejected oversized requests using metadata only, without storing submitted field values.
 - [ ] Normalize and trim text fields before database writes and notifications.
 - [ ] Validate the expected origin or client identifier before processing website submissions.
 - [ ] Confirm malformed requests return a clear 4xx response without creating a lead record.
