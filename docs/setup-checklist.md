@@ -67,6 +67,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm success and error responses follow one documented JSON schema.
 - [ ] Confirm webhook responses disable caching so prior submission results are not reused.
 - [ ] Verify webhook responses declare `application/json` consistently.
+- [ ] Confirm webhook responses stay within a small documented size limit.
 - [ ] Record webhook response status codes in operational logs without storing form contents.
 - [ ] Include a non-sensitive request ID in logs to trace one submission across the workflow.
 - [ ] Return the same non-sensitive request ID in the webhook response for support correlation.
