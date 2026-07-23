@@ -33,6 +33,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Create or import the workflow.
 - [ ] Add website webhook node.
 - [ ] Confirm the webhook accepts only the intended HTTP method.
+- [ ] Record rejected HTTP methods in metadata-only operational logs.
 - [ ] Reject unexpected webhook content types before processing input.
 - [ ] Enforce a reasonable maximum webhook payload size.
 - [ ] Log rejected oversized requests using metadata only, without storing submitted field values.
