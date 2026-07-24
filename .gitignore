@@ -30,6 +30,7 @@ dist
 .serverless/
 .vite/
 .turbo/
+.eslintcache
 *.tsbuildinfo
 coverage/
 
