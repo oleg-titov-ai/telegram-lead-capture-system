@@ -216,3 +216,5 @@ A simple n8n + PostgreSQL + Telegram automation for capturing website leads and 
 
 **Russian:**  
 Простая автоматизация на n8n, PostgreSQL и Telegram для приёма заявок с сайта и отправки их менеджерам в Telegram-группу.
+
+Maintenance note: verify malformed optional form fields are rejected or normalized without creating partial lead records.
