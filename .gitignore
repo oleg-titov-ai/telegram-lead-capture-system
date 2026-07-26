@@ -16,6 +16,7 @@ pids
 node_modules/
 jspm_packages/
 web_modules/
+.pnpm-store/
 
 # Build / cache
 .cache
