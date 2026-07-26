@@ -33,6 +33,7 @@ dist
 .eslintcache
 *.tsbuildinfo
 coverage/
+.nyc_output/
 
 # Environment files
 .env
