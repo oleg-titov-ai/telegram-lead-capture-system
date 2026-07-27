@@ -59,6 +59,7 @@ backup/
 *.backup
 
 # n8n local / exported sensitive files
+.n8n/
 n8n/credentials*.json
 n8n/*production*.json
 n8n/*private*.json
