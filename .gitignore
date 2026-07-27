@@ -41,6 +41,8 @@ coverage/
 .env
 .env.*
 !.env.example
+.envrc
+.direnv/
 
 # OS / editor
 .DS_Store
