@@ -220,3 +220,5 @@ A simple n8n + PostgreSQL + Telegram automation for capturing website leads and 
 Maintenance note: verify malformed optional form fields are rejected or normalized without creating partial lead records.
 
 Maintenance note: verify repeated webhook deliveries do not create duplicate manager notifications.
+
+Maintenance note: confirm demo webhook responses do not expose internal database IDs or workflow details.
