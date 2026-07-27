@@ -85,6 +85,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Escape user-provided text before inserting it into Markdown or HTML-formatted manager notifications.
 - [ ] Simulate a Telegram notification failure and verify the lead remains stored for retry.
 - [ ] Confirm only one worker owns each notification retry attempt to prevent duplicate manager messages.
+- [ ] Confirm retry ownership is released after worker failure so another worker can continue safely.
 - [ ] Confirm retryable notification failures are visible in operational status without exposing lead contents.
 - [ ] Monitor the age of pending manager notifications so stalled retries are visible.
 - [ ] Stop retrying notifications after the documented maximum age and surface them for manual review.
