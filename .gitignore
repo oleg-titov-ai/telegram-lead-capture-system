@@ -74,3 +74,4 @@ n8n/*private*.json
 # Test artifacts
 playwright-report/
 test-results/
+junit.xml
