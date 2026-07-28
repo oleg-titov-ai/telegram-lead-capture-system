@@ -36,6 +36,7 @@ dist
 *.tsbuildinfo
 coverage/
 .nyc_output/
+*.lcov
 
 # Environment files
 .env
