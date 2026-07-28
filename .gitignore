@@ -39,6 +39,7 @@ dist
 coverage/
 .nyc_output/
 *.lcov
+storybook-static/
 
 # Environment files
 .env
