@@ -5,3 +5,5 @@ Before a demo, test duplicate-webhook handling, malformed optional fields, manag
 Confirm the consent text and privacy-policy link are visible and valid in every public lead-entry path.
 
 Submit a synthetic duplicate lead after workflow changes to confirm retries do not create extra CRM records or notifications.
+
+Verify webhook error responses remain generic and do not expose workflow names, database details, or internal identifiers.
