@@ -9,3 +9,5 @@ Submit a synthetic duplicate lead after workflow changes to confirm retries do n
 Verify webhook error responses remain generic and do not expose workflow names, database details, or internal identifiers.
 
 Confirm stored demo leads record the consent version or timestamp needed for a basic audit trail.
+
+Test the manager-notification fallback with a synthetic lead so a temporary messaging failure does not silently lose the request.
