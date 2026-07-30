@@ -7,3 +7,5 @@ Confirm the consent text and privacy-policy link are visible and valid in every 
 Submit a synthetic duplicate lead after workflow changes to confirm retries do not create extra CRM records or notifications.
 
 Verify webhook error responses remain generic and do not expose workflow names, database details, or internal identifiers.
+
+Confirm stored demo leads record the consent version or timestamp needed for a basic audit trail.
