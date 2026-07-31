@@ -15,3 +15,5 @@ Test the manager-notification fallback with a synthetic lead so a temporary mess
 Verify each synthetic lead has a non-sensitive correlation identifier in logs so webhook, database, and notification steps can be traced without exposing customer data.
 
 Review stale synthetic leads periodically to confirm follow-up status, retry history, and ownership remain consistent across CRM and notifications.
+
+Inspect one test manager notification to confirm it contains only the fields needed for follow-up and no internal database identifiers.
