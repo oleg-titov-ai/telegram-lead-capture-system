@@ -19,3 +19,5 @@ Review stale synthetic leads periodically to confirm follow-up status, retry his
 Inspect one test manager notification to confirm it contains only the fields needed for follow-up and no internal database identifiers.
 
 Confirm demo lead cleanup follows the documented retention period and does not remove active test cases unexpectedly.
+
+Verify malformed consent input is rejected before any synthetic lead record or manager notification is created.
