@@ -17,3 +17,5 @@ Verify each synthetic lead has a non-sensitive correlation identifier in logs so
 Review stale synthetic leads periodically to confirm follow-up status, retry history, and ownership remain consistent across CRM and notifications.
 
 Inspect one test manager notification to confirm it contains only the fields needed for follow-up and no internal database identifiers.
+
+Confirm demo lead cleanup follows the documented retention period and does not remove active test cases unexpectedly.
