@@ -91,6 +91,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Stop retrying notifications after the documented maximum age and surface them for manual review.
 - [ ] Reconcile queued, sent, failed, and expired notification counts after a retry test.
 - [ ] Audit a retry test by request ID and confirm no manager receives the same notification twice.
+- [ ] Confirm the oldest pending notification age is included in non-sensitive operational status.
 - [ ] Open Telegram bot with `/start demo-client`.
 - [ ] Complete the dialog.
 - [ ] Check that Telegram lead is saved.
