@@ -21,3 +21,5 @@ Inspect one test manager notification to confirm it contains only the fields nee
 Confirm demo lead cleanup follows the documented retention period and does not remove active test cases unexpectedly.
 
 Verify malformed consent input is rejected before any synthetic lead record or manager notification is created.
+
+Confirm webhook request bodies are not written to logs unless sensitive fields are explicitly redacted.
