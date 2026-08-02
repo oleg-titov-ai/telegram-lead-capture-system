@@ -94,6 +94,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm the oldest pending notification age is included in non-sensitive operational status.
 - [ ] Confirm the pending-notification count and oldest age are reviewed together before declaring the queue healthy.
 - [ ] Confirm a released retry lock cannot be reclaimed by the same failed worker instance.
+- [ ] Confirm retry queue audit records identify the owning worker instance without storing lead contents.
 - [ ] Open Telegram bot with `/start demo-client`.
 - [ ] Complete the dialog.
 - [ ] Check that Telegram lead is saved.
