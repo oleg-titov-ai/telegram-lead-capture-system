@@ -23,3 +23,5 @@ Confirm demo lead cleanup follows the documented retention period and does not r
 Verify malformed consent input is rejected before any synthetic lead record or manager notification is created.
 
 Confirm webhook request bodies are not written to logs unless sensitive fields are explicitly redacted.
+
+Confirm notification retries stop after a documented limit and leave the lead visible for manual follow-up.
