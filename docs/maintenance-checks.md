@@ -8,3 +8,4 @@ Before a demo or deployment:
 - Review logs and screenshots for real chat IDs, customer data, and private endpoints.
 - Confirm partially completed submissions expire without creating incomplete leads.
 - Verify expired temporary submission data is removed according to the documented retention window.
+- Confirm consent status is recorded with the submission timestamp without storing unnecessary client metadata.
