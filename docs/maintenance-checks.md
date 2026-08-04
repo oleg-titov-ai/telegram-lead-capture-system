@@ -12,3 +12,4 @@ Before a demo or deployment:
 - Verify notification failures remain visible for manual follow-up without exposing lead details in logs.
 - Reject oversized webhook payloads before parsing and record only a non-sensitive failure reason.
 - Confirm public demo instructions use placeholder endpoints and test chat identifiers only.
+- Validate individual field lengths before storing or forwarding a lead submission.
