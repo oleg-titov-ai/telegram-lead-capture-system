@@ -11,3 +11,4 @@ Before a demo or deployment:
 - Confirm consent status is recorded with the submission timestamp without storing unnecessary client metadata.
 - Verify notification failures remain visible for manual follow-up without exposing lead details in logs.
 - Reject oversized webhook payloads before parsing and record only a non-sensitive failure reason.
+- Confirm public demo instructions use placeholder endpoints and test chat identifiers only.
