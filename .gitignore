@@ -75,3 +75,6 @@ n8n/*private*.json
 playwright-report/
 test-results/
 junit.xml
+
+# Local webhook payload captures
+webhook-captures/
