@@ -14,3 +14,4 @@ Before a demo or deployment:
 - Confirm public demo instructions use placeholder endpoints and test chat identifiers only.
 - Validate individual field lengths before storing or forwarding a lead submission.
 - Confirm normalized phone and email fields are validated before duplicate matching.
+- Verify consent wording shown in the demo matches the wording documented for stored submissions.
