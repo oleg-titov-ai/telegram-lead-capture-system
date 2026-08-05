@@ -13,3 +13,4 @@ Before a demo or deployment:
 - Reject oversized webhook payloads before parsing and record only a non-sensitive failure reason.
 - Confirm public demo instructions use placeholder endpoints and test chat identifiers only.
 - Validate individual field lengths before storing or forwarding a lead submission.
+- Confirm normalized phone and email fields are validated before duplicate matching.
