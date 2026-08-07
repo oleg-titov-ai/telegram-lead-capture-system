@@ -78,6 +78,8 @@ email addresses
 private company data
 ```
 
+Review recent commit history as well as the current tree so removed secrets or real lead exports are not overlooked.
+
 ---
 
 ## 🧩 n8n Export Rules
