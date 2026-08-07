@@ -100,6 +100,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Complete the dialog.
 - [ ] Check that Telegram lead is saved.
 - [ ] Check that manager notification is sent.
+- [ ] Trace one demo submission end to end by request ID and confirm no private form values appear in operational logs.
 
 ---
 
