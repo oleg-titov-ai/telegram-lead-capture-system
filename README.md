@@ -224,3 +224,5 @@ Maintenance note: verify repeated webhook deliveries do not create duplicate man
 Maintenance note: confirm demo webhook responses do not expose internal database IDs or workflow details.
 
 Maintenance note: verify notification retries stop after success and do not resend the same lead to managers.
+
+Maintenance note: confirm portfolio notification examples use synthetic names and contact details only.
