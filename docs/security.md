@@ -82,6 +82,8 @@ Review recent commit history as well as the current tree so removed secrets or r
 
 Confirm any demo webhook payload contains only synthetic names, phone numbers, emails, and client identifiers before committing it.
 
+Confirm example domains and webhook URLs resolve only to neutral demo placeholders, never production infrastructure.
+
 ---
 
 ## 🧩 n8n Export Rules
