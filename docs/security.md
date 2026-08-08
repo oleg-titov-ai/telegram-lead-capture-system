@@ -84,6 +84,8 @@ Confirm any demo webhook payload contains only synthetic names, phone numbers, e
 
 Confirm example domains and webhook URLs resolve only to neutral demo placeholders, never production infrastructure.
 
+Confirm demo form fixtures and screenshots use the same synthetic contact set so no real lead data is mixed into examples.
+
 ---
 
 ## 🧩 n8n Export Rules
