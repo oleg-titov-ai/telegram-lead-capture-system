@@ -80,6 +80,8 @@ private company data
 
 Review recent commit history as well as the current tree so removed secrets or real lead exports are not overlooked.
 
+Confirm any demo webhook payload contains only synthetic names, phone numbers, emails, and client identifiers before committing it.
+
 ---
 
 ## 🧩 n8n Export Rules
