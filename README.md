@@ -228,3 +228,5 @@ Maintenance note: verify notification retries stop after success and do not rese
 Maintenance note: confirm portfolio notification examples use synthetic names and contact details only.
 
 Maintenance note: verify demo form validation examples match the current required fields before portfolio review.
+
+Maintenance note: verify duplicate demo submissions resolve to one lead record when the same idempotency key is reused.
