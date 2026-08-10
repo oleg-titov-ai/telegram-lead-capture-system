@@ -226,3 +226,5 @@ Maintenance note: confirm demo webhook responses do not expose internal database
 Maintenance note: verify notification retries stop after success and do not resend the same lead to managers.
 
 Maintenance note: confirm portfolio notification examples use synthetic names and contact details only.
+
+Maintenance note: verify demo form validation examples match the current required fields before portfolio review.
