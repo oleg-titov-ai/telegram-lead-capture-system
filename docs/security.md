@@ -86,6 +86,8 @@ Confirm example domains and webhook URLs resolve only to neutral demo placeholde
 
 Confirm demo form fixtures and screenshots use the same synthetic contact set so no real lead data is mixed into examples.
 
+Confirm sample webhook headers use placeholders and do not reveal production authentication or tracing values.
+
 ---
 
 ## 🧩 n8n Export Rules
