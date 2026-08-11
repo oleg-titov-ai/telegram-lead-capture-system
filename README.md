@@ -230,3 +230,5 @@ Maintenance note: confirm portfolio notification examples use synthetic names an
 Maintenance note: verify demo form validation examples match the current required fields before portfolio review.
 
 Maintenance note: verify duplicate demo submissions resolve to one lead record when the same idempotency key is reused.
+
+Maintenance note: keep demo notification examples traceable to synthetic test submissions without exposing internal identifiers.
