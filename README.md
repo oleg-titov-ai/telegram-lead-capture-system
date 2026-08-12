@@ -234,3 +234,5 @@ Maintenance note: verify duplicate demo submissions resolve to one lead record w
 Maintenance note: keep demo notification examples traceable to synthetic test submissions without exposing internal identifiers.
 
 Maintenance note: confirm the documented demo webhook request and response fields still match the current form contract.
+
+Maintenance note: verify demo success and validation responses use the documented HTTP status codes.
