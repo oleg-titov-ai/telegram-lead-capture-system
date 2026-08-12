@@ -236,3 +236,5 @@ Maintenance note: keep demo notification examples traceable to synthetic test su
 Maintenance note: confirm the documented demo webhook request and response fields still match the current form contract.
 
 Maintenance note: verify demo success and validation responses use the documented HTTP status codes.
+
+Maintenance note: keep documented demo payload field names synchronized with the current website form and webhook contract.
