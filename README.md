@@ -238,3 +238,5 @@ Maintenance note: confirm the documented demo webhook request and response field
 Maintenance note: verify demo success and validation responses use the documented HTTP status codes.
 
 Maintenance note: keep documented demo payload field names synchronized with the current website form and webhook contract.
+
+Maintenance note: verify webhook timeout handling returns a safe generic response without exposing internal workflow details.
