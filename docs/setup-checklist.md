@@ -22,7 +22,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Run `sql/001_schema.sql`.
 - [ ] Run `sql/002_functions.sql`.
 - [ ] Run `sql/003_demo_data.sql`.
-- [ ] Check that demo client exists.
+- [ ] Check that the demo client exists and uses placeholder contact data.
 
 ---
 
