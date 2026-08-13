@@ -240,3 +240,5 @@ Maintenance note: verify demo success and validation responses use the documente
 Maintenance note: keep documented demo payload field names synchronized with the current website form and webhook contract.
 
 Maintenance note: verify webhook timeout handling returns a safe generic response without exposing internal workflow details.
+
+Maintenance note: confirm documented field-length limits match both website validation and backend normalization rules.
