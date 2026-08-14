@@ -103,6 +103,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Trace one demo submission end to end by request ID and confirm no private form values appear in operational logs.
 - [ ] Confirm demo webhook examples use placeholder domains rather than live customer domains.
 - [ ] Verify one demo lead can be removed cleanly without leaving orphaned dialog-state records.
+- [ ] Verify the previous stable workflow export or version is available before deploying a behavior-changing update.
 
 ---
 
