@@ -88,6 +88,8 @@ Confirm demo form fixtures and screenshots use the same synthetic contact set so
 
 Confirm sample webhook headers use placeholders and do not reveal production authentication or tracing values.
 
+Confirm demo error examples contain generic messages and never copy raw database or workflow exceptions into public screenshots.
+
 ---
 
 ## 🧩 n8n Export Rules
