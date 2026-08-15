@@ -106,6 +106,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Verify the previous stable workflow export or version is available before deploying a behavior-changing update.
 - [ ] Test restoring the previous stable workflow version once so the documented rollback path is proven before production changes.
 - [ ] Confirm a demo request ID shown in screenshots cannot be confused with a production correlation identifier.
+- [ ] Reset demo leads and dialog state before recording a new portfolio walkthrough so screenshots start from a known clean state.
 
 ---
 
