@@ -28,3 +28,5 @@ Open a GitHub issue with a safe description. Do not include tokens, webhook URLs
 ## Production Notes
 
 A production deployment should include access control, audit logging, backup strategy, consent tracking, and a clear privacy policy for lead processing.
+
+Before publishing screenshots or payload examples, verify request IDs and timestamps are synthetic or intentionally non-sensitive.
