@@ -242,3 +242,5 @@ Maintenance note: keep documented demo payload field names synchronized with the
 Maintenance note: verify webhook timeout handling returns a safe generic response without exposing internal workflow details.
 
 Maintenance note: confirm documented field-length limits match both website validation and backend normalization rules.
+
+Maintenance note: rerun the demo seed after schema migrations and confirm sample leads still satisfy current constraints.
