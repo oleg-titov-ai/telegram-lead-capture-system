@@ -244,3 +244,5 @@ Maintenance note: verify webhook timeout handling returns a safe generic respons
 Maintenance note: confirm documented field-length limits match both website validation and backend normalization rules.
 
 Maintenance note: rerun the demo seed after schema migrations and confirm sample leads still satisfy current constraints.
+
+Maintenance note: verify demo reset procedures clear pending notification retries before recording a new end-to-end portfolio run.
