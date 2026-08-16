@@ -108,6 +108,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm a demo request ID shown in screenshots cannot be confused with a production correlation identifier.
 - [ ] Reset demo leads and dialog state before recording a new portfolio walkthrough so screenshots start from a known clean state.
 - [ ] Confirm the reset leaves zero pending demo notification retries before recording screenshots.
+- [ ] Confirm demo cleanup also removes synthetic correlation IDs from prior walkthroughs before new screenshots are captured.
 
 ---
 
