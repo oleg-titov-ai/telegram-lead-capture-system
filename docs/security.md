@@ -90,6 +90,8 @@ Confirm sample webhook headers use placeholders and do not reveal production aut
 
 Confirm demo error examples contain generic messages and never copy raw database or workflow exceptions into public screenshots.
 
+Confirm demo execution logs are scrubbed of real chat IDs, webhook URLs, and database connection details before publication.
+
 ---
 
 ## 🧩 n8n Export Rules
