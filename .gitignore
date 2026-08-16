@@ -78,6 +78,7 @@ junit.xml
 
 # Local webhook payload captures
 webhook-captures/
+webhook-response-captures/
 
 # Local lead replay fixtures
 lead-replay-fixtures/
