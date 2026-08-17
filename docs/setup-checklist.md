@@ -111,6 +111,7 @@ Use this checklist to deploy a demo or production version.
 - [ ] Confirm demo cleanup also removes synthetic correlation IDs from prior walkthroughs before new screenshots are captured.
 - [ ] Run one fresh synthetic submission after reset and confirm the workflow returns to the documented baseline state.
 - [ ] Confirm the final demo walkthrough ends with zero unowned or expired notification retry locks.
+- [ ] Confirm the final demo walkthrough also leaves the retry queue empty before capturing the closing portfolio screenshot.
 
 ---
 
