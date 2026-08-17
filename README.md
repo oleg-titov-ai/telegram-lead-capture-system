@@ -246,3 +246,5 @@ Maintenance note: confirm documented field-length limits match both website vali
 Maintenance note: rerun the demo seed after schema migrations and confirm sample leads still satisfy current constraints.
 
 Maintenance note: verify demo reset procedures clear pending notification retries before recording a new end-to-end portfolio run.
+
+Maintenance note: confirm a fresh demo reset leaves no stale dialog state before testing the Telegram `/start` flow.
