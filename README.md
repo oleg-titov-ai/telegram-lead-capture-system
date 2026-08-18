@@ -250,3 +250,5 @@ Maintenance note: verify demo reset procedures clear pending notification retrie
 Maintenance note: confirm a fresh demo reset leaves no stale dialog state before testing the Telegram `/start` flow.
 
 Maintenance note: confirm demo reset also clears synthetic lead records that could otherwise appear in the next portfolio walkthrough.
+
+Maintenance note: verify a demo reset can be followed by one clean website submission and one clean Telegram flow without carrying over prior state.
