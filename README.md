@@ -252,3 +252,5 @@ Maintenance note: confirm a fresh demo reset leaves no stale dialog state before
 Maintenance note: confirm demo reset also clears synthetic lead records that could otherwise appear in the next portfolio walkthrough.
 
 Maintenance note: verify a demo reset can be followed by one clean website submission and one clean Telegram flow without carrying over prior state.
+
+Maintenance note: confirm demo reset preserves the required seeded demo client so the documented `/start demo-client` flow remains reproducible.
