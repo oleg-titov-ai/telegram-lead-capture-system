@@ -256,3 +256,5 @@ Maintenance note: verify a demo reset can be followed by one clean website submi
 Maintenance note: confirm demo reset preserves the required seeded demo client so the documented `/start demo-client` flow remains reproducible.
 
 Maintenance note: after an end-to-end demo, verify the website response, stored lead, and Telegram notification all reference the same synthetic submission.
+
+Maintenance note: verify a completed demo reset leaves zero pending retries before the next portfolio walkthrough begins.
