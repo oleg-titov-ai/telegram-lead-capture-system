@@ -92,6 +92,8 @@ Confirm demo error examples contain generic messages and never copy raw database
 
 Confirm demo execution logs are scrubbed of real chat IDs, webhook URLs, and database connection details before publication.
 
+Confirm published screenshots contain no notification previews, browser profiles, or other incidental account metadata.
+
 ---
 
 ## 🧩 n8n Export Rules
