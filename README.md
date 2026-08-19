@@ -254,3 +254,5 @@ Maintenance note: confirm demo reset also clears synthetic lead records that cou
 Maintenance note: verify a demo reset can be followed by one clean website submission and one clean Telegram flow without carrying over prior state.
 
 Maintenance note: confirm demo reset preserves the required seeded demo client so the documented `/start demo-client` flow remains reproducible.
+
+Maintenance note: after an end-to-end demo, verify the website response, stored lead, and Telegram notification all reference the same synthetic submission.
