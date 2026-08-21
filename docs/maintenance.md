@@ -8,3 +8,4 @@
 - 2026-08-21: Verify duplicate demo submissions with the same correlation key do not create duplicate stored leads or duplicate Telegram notifications.
 - 2026-08-21: Keep the demo notification status aligned with the stored lead status so a portfolio walkthrough cannot show a successful notification for a lead that failed validation or persistence.
 - 2026-08-21: Verify a demo lead can be deleted or reset cleanly without leaving an orphaned notification retry or stale conversation-state reference.
+- 2026-08-21: Recheck the documented webhook response examples after validation changes so success and error payloads remain accurate and contain no internal stack details.
