@@ -6,3 +6,4 @@
 - 2026-08-20: Verify the documented form fields, stored lead fields, and Telegram notification example remain in sync after schema changes.
 - 2026-08-20: Re-run the documented demo webhook example after contract changes and confirm invalid required fields still fail cleanly without creating a partial lead.
 - 2026-08-21: Verify duplicate demo submissions with the same correlation key do not create duplicate stored leads or duplicate Telegram notifications.
+- 2026-08-21: Keep the demo notification status aligned with the stored lead status so a portfolio walkthrough cannot show a successful notification for a lead that failed validation or persistence.
