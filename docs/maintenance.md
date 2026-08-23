@@ -16,3 +16,4 @@
 - 2026-08-23: Verify a simulated notification failure can be retried once in the synthetic demo without duplicating the persisted lead or changing its original submission payload.
 - 2026-08-23: Verify a synthetic lead with optional fields omitted still follows the documented happy path without adding undocumented null or placeholder values to the notification.
 - 2026-08-23: Keep validation examples synchronized across the form, persisted lead, and notification payload so reviewers see one consistent synthetic schema.
+- 2026-08-23: After a full demo reset, verify the first synthetic submission starts with an empty retry queue and creates only the expected lead and notification records.
