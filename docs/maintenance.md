@@ -13,3 +13,4 @@
 - 2026-08-22: Keep the documented demo field mapping explicit enough to compare form input, persisted lead data, and notification output without relying on production-only fields.
 - 2026-08-22: After a demo reset, verify the next synthetic submission receives a fresh correlation ID and does not inherit retry or conversation state from the previous walkthrough.
 - 2026-08-22: Keep portfolio demo timestamps synthetic or normalized so screenshots and sample payloads cannot reveal real operating times or customer activity windows.
+- 2026-08-23: Verify a simulated notification failure can be retried once in the synthetic demo without duplicating the persisted lead or changing its original submission payload.
