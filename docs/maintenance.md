@@ -18,3 +18,4 @@
 - 2026-08-23: Keep validation examples synchronized across the form, persisted lead, and notification payload so reviewers see one consistent synthetic schema.
 - 2026-08-23: After a full demo reset, verify the first synthetic submission starts with an empty retry queue and creates only the expected lead and notification records.
 - 2026-08-24: Verify the documented invalid-submit example leaves both persistence and notification counts unchanged so failed validation cannot look like a partially accepted lead.
+- 2026-08-24: Keep one synthetic duplicate-submit check that confirms the second request is handled idempotently without creating a second lead or notification.
