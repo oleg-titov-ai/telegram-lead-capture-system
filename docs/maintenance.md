@@ -21,3 +21,4 @@
 - 2026-08-24: Keep one synthetic duplicate-submit check that confirms the second request is handled idempotently without creating a second lead or notification.
 - 2026-08-24: Verify a synthetic notification retry preserves the original lead ID and correlation ID so troubleshooting does not create a second logical submission.
 - 2026-08-24: Keep one synthetic attachment-free submission in the demo checklist so the base lead flow stays verifiable without relying on external files or media URLs.
+- 2026-08-25: Keep one synthetic over-length field example in the demo checklist and verify validation rejects it without persisting a lead, queuing a notification, or exposing backend implementation details.
