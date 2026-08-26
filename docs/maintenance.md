@@ -25,3 +25,4 @@
 - 2026-08-25: Keep one documented minimal synthetic payload and verify its field names match the current form contract before capturing any portfolio walkthrough.
 - 2026-08-25: Verify the synthetic submission timestamp is represented consistently in the stored lead and notification example so portfolio screenshots cannot imply mismatched processing events.
 - 2026-08-25: After the documented demo reset, verify both the notification retry queue and conversation-state store are empty before accepting the next synthetic lead.
+- 2026-08-26: Add one synthetic Unicode-name submission to the demo checklist so validation, persistence, and notification rendering stay consistent for non-Latin text.
