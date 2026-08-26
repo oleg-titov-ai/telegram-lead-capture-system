@@ -27,3 +27,4 @@
 - 2026-08-25: After the documented demo reset, verify both the notification retry queue and conversation-state store are empty before accepting the next synthetic lead.
 - 2026-08-26: Add one synthetic Unicode-name submission to the demo checklist so validation, persistence, and notification rendering stay consistent for non-Latin text.
 - 2026-08-26: Verify trimming and normalization of synthetic contact fields stays consistent between form input, persisted lead data, and the Telegram notification.
+- 2026-08-26: Verify one synthetic notification retry after a transient failure preserves the original lead payload while producing only one final success record.
