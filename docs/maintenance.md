@@ -28,3 +28,4 @@
 - 2026-08-26: Add one synthetic Unicode-name submission to the demo checklist so validation, persistence, and notification rendering stay consistent for non-Latin text.
 - 2026-08-26: Verify trimming and normalization of synthetic contact fields stays consistent between form input, persisted lead data, and the Telegram notification.
 - 2026-08-26: Verify one synthetic notification retry after a transient failure preserves the original lead payload while producing only one final success record.
+- 2026-08-26: Verify replaying the same synthetic retry event is idempotent and cannot create a second notification success or mutate the original persisted lead.
