@@ -31,3 +31,4 @@
 - 2026-08-26: Verify replaying the same synthetic retry event is idempotent and cannot create a second notification success or mutate the original persisted lead.
 - 2026-08-27: Verify synthetic demo submissions with unexpected extra fields are either ignored or rejected consistently without persisting undocumented data or changing notification content.
 - 2026-08-27: Keep one synthetic check where equivalent whitespace-only field variations normalize to the same stored and notification values without changing idempotency behavior.
+- 2026-08-27: Verify two equivalent synthetic payloads that normalize to the same canonical contact values still produce only one logical lead and one final notification.
