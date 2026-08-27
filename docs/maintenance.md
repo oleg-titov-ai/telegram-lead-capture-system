@@ -29,3 +29,4 @@
 - 2026-08-26: Verify trimming and normalization of synthetic contact fields stays consistent between form input, persisted lead data, and the Telegram notification.
 - 2026-08-26: Verify one synthetic notification retry after a transient failure preserves the original lead payload while producing only one final success record.
 - 2026-08-26: Verify replaying the same synthetic retry event is idempotent and cannot create a second notification success or mutate the original persisted lead.
+- 2026-08-27: Verify synthetic demo submissions with unexpected extra fields are either ignored or rejected consistently without persisting undocumented data or changing notification content.
