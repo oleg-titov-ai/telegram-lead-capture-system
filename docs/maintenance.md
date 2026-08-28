@@ -33,3 +33,4 @@
 - 2026-08-27: Keep one synthetic check where equivalent whitespace-only field variations normalize to the same stored and notification values without changing idempotency behavior.
 - 2026-08-27: Verify two equivalent synthetic payloads that normalize to the same canonical contact values still produce only one logical lead and one final notification.
 - 2026-08-27: Verify documented error responses use stable, non-sensitive error codes so demo clients can distinguish validation failures from temporary delivery failures without internal details.
+- 2026-08-28: Keep canonical phone and email normalization rules documented and verify the same synthetic contact is represented identically in validation, persistence, deduplication, and notification output.
