@@ -35,3 +35,4 @@
 - 2026-08-27: Verify documented error responses use stable, non-sensitive error codes so demo clients can distinguish validation failures from temporary delivery failures without internal details.
 - 2026-08-28: Keep canonical phone and email normalization rules documented and verify the same synthetic contact is represented identically in validation, persistence, deduplication, and notification output.
 - 2026-08-28: Verify a synthetic contact that normalizes to an existing canonical phone or email is handled consistently before notification, preventing duplicate portfolio leads from formatting-only differences.
+- 2026-08-28: Verify redacted demo payload logs preserve field names and validation outcomes while replacing contact values with synthetic placeholders, so troubleshooting examples remain useful and portfolio-safe.
