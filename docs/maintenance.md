@@ -37,3 +37,4 @@
 - 2026-08-28: Verify a synthetic contact that normalizes to an existing canonical phone or email is handled consistently before notification, preventing duplicate portfolio leads from formatting-only differences.
 - 2026-08-28: Verify redacted demo payload logs preserve field names and validation outcomes while replacing contact values with synthetic placeholders, so troubleshooting examples remain useful and portfolio-safe.
 - 2026-08-28: Verify a contact value that becomes empty after trimming or canonicalization is rejected before persistence and notification, with no partial demo state created.
+- 2026-08-29: Keep one synthetic validation example for a structurally valid but duplicate contact so deduplication behavior remains easy to review without exposing real lead data.
