@@ -42,3 +42,4 @@
 - 2026-08-29: Verify documented demo error examples omit raw webhook payloads and retain only synthetic field names, status, and non-sensitive error codes.
 - 2026-08-29: Keep synthetic lead IDs and correlation IDs visibly distinct in documentation so reviewers can follow retries without confusing transport identifiers with persisted records.
 - 2026-08-30: Verify validation errors reference canonical field names rather than raw submitted contact values, keeping troubleshooting consistent without echoing synthetic or real contact data.
+- 2026-08-30: Keep retry troubleshooting examples limited to redacted identifiers, status transitions, and synthetic error codes so portfolio documentation remains useful without preserving contact payloads.
