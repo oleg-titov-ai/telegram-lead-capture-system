@@ -41,3 +41,4 @@
 - 2026-08-29: Verify canonicalized synthetic contact values are reused consistently in retry diagnostics so formatting variants cannot make one logical demo lead appear as multiple records.
 - 2026-08-29: Verify documented demo error examples omit raw webhook payloads and retain only synthetic field names, status, and non-sensitive error codes.
 - 2026-08-29: Keep synthetic lead IDs and correlation IDs visibly distinct in documentation so reviewers can follow retries without confusing transport identifiers with persisted records.
+- 2026-08-30: Verify validation errors reference canonical field names rather than raw submitted contact values, keeping troubleshooting consistent without echoing synthetic or real contact data.
