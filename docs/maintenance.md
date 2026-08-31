@@ -46,3 +46,4 @@
 - 2026-08-30: Verify a synthetic payload containing only optional fields fails required-field validation before deduplication, persistence, or notification work begins.
 - 2026-08-30: Verify duplicate-contact diagnostics report only the canonical field name and duplicate status, never the normalized contact value itself.
 - 2026-08-31: Verify a synthetic submission with mixed valid and invalid optional fields is rejected atomically, leaving no partial lead, retry, or notification state.
+- 2026-08-31: Verify a normalized synthetic contact that matches an existing lead does not advance notification retry state when the duplicate submission is rejected.
