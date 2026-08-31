@@ -47,3 +47,4 @@
 - 2026-08-30: Verify duplicate-contact diagnostics report only the canonical field name and duplicate status, never the normalized contact value itself.
 - 2026-08-31: Verify a synthetic submission with mixed valid and invalid optional fields is rejected atomically, leaving no partial lead, retry, or notification state.
 - 2026-08-31: Verify a normalized synthetic contact that matches an existing lead does not advance notification retry state when the duplicate submission is rejected.
+- 2026-08-31: Verify a full synthetic demo reset also clears deduplication cache entries so the documented baseline does not depend on hidden state from prior walkthroughs.
