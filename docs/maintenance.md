@@ -45,3 +45,4 @@
 - 2026-08-30: Keep retry troubleshooting examples limited to redacted identifiers, status transitions, and synthetic error codes so portfolio documentation remains useful without preserving contact payloads.
 - 2026-08-30: Verify a synthetic payload containing only optional fields fails required-field validation before deduplication, persistence, or notification work begins.
 - 2026-08-30: Verify duplicate-contact diagnostics report only the canonical field name and duplicate status, never the normalized contact value itself.
+- 2026-08-31: Verify a synthetic submission with mixed valid and invalid optional fields is rejected atomically, leaving no partial lead, retry, or notification state.
