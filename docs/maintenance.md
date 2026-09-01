@@ -49,3 +49,4 @@
 - 2026-08-31: Verify a normalized synthetic contact that matches an existing lead does not advance notification retry state when the duplicate submission is rejected.
 - 2026-08-31: Verify a full synthetic demo reset also clears deduplication cache entries so the documented baseline does not depend on hidden state from prior walkthroughs.
 - 2026-08-31: Verify a rejected synthetic duplicate leaves aggregate lead, notification, and retry counts unchanged, making idempotency behavior easy to confirm in a portfolio walkthrough.
+- 2026-09-01: Verify the documented synthetic lead reset also clears any validation-only counters so the next portfolio walkthrough begins from a fully neutral baseline.
