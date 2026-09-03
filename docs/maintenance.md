@@ -52,3 +52,4 @@
 - 2026-09-01: Verify the documented synthetic lead reset also clears any validation-only counters so the next portfolio walkthrough begins from a fully neutral baseline.
 - 2026-09-02: Verify a synthetic validation-only request does not allocate a lead ID, correlation retry record, or notification placeholder before persistence begins.
 - 2026-09-03: Verify a rejected synthetic webhook with an unsupported content type leaves validation, persistence, deduplication, retry, and notification state unchanged.
+- 2026-09-03: Verify a synthetic webhook with an unsupported HTTP method is rejected before body parsing and leaves persistence, deduplication, retry, and notification state unchanged.
