@@ -51,3 +51,4 @@
 - 2026-08-31: Verify a rejected synthetic duplicate leaves aggregate lead, notification, and retry counts unchanged, making idempotency behavior easy to confirm in a portfolio walkthrough.
 - 2026-09-01: Verify the documented synthetic lead reset also clears any validation-only counters so the next portfolio walkthrough begins from a fully neutral baseline.
 - 2026-09-02: Verify a synthetic validation-only request does not allocate a lead ID, correlation retry record, or notification placeholder before persistence begins.
+- 2026-09-03: Verify a rejected synthetic webhook with an unsupported content type leaves validation, persistence, deduplication, retry, and notification state unchanged.
