@@ -56,3 +56,4 @@
 - 2026-09-03: Verify an empty synthetic webhook body fails required-payload validation before ID allocation, deduplication, persistence, retry, or notification state is created.
 - 2026-09-04: Verify malformed synthetic JSON is rejected before field validation and leaves lead, deduplication, retry, and notification state unchanged.
 - 2026-09-04: Verify an oversized synthetic request is rejected before persistence and notification work, with a generic response that does not echo submitted content.
+- 2026-09-04: Verify unexpected synthetic query-string parameters are ignored or rejected consistently and never become persisted lead fields, notification content, or deduplication inputs.
