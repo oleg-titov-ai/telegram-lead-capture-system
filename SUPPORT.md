@@ -32,3 +32,5 @@ A production deployment should include access control, consent tracking, backups
 ## Project Status
 
 This is not a commercial support channel. Issues and improvements are handled as time allows.
+
+Maintenance review: issue reports should use synthetic reproduction data and avoid customer-specific examples.
