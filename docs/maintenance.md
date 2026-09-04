@@ -54,3 +54,4 @@
 - 2026-09-03: Verify a rejected synthetic webhook with an unsupported content type leaves validation, persistence, deduplication, retry, and notification state unchanged.
 - 2026-09-03: Verify a synthetic webhook with an unsupported HTTP method is rejected before body parsing and leaves persistence, deduplication, retry, and notification state unchanged.
 - 2026-09-03: Verify an empty synthetic webhook body fails required-payload validation before ID allocation, deduplication, persistence, retry, or notification state is created.
+- 2026-09-04: Verify malformed synthetic JSON is rejected before field validation and leaves lead, deduplication, retry, and notification state unchanged.
