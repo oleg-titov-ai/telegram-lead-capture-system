@@ -58,3 +58,4 @@
 - 2026-09-04: Verify an oversized synthetic request is rejected before persistence and notification work, with a generic response that does not echo submitted content.
 - 2026-09-04: Verify unexpected synthetic query-string parameters are ignored or rejected consistently and never become persisted lead fields, notification content, or deduplication inputs.
 - 2026-09-05: Verify a synthetic request with duplicated field names is rejected or canonicalized deterministically before deduplication and persistence, without producing ambiguous notification content.
+- 2026-09-05: Verify a synthetic request containing an unknown nested object is rejected or ignored consistently before persistence, without flattening undocumented fields into lead or notification data.
