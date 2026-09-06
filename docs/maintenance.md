@@ -61,3 +61,4 @@
 - 2026-09-05: Verify a synthetic request containing an unknown nested object is rejected or ignored consistently before persistence, without flattening undocumented fields into lead or notification data.
 - 2026-09-05: Verify synthetic fields with the wrong JSON scalar type are rejected before normalization, deduplication, persistence, or notification rendering begins.
 - 2026-09-05: Verify a synthetic field supplied as an array where a scalar is expected is rejected before normalization, deduplication, persistence, or notification rendering, with no partial state created.
+- 2026-09-06: Verify explicitly null optional fields follow the documented null policy without becoming the literal string "null" in persisted lead data, notifications, or deduplication inputs.
