@@ -64,3 +64,4 @@
 - 2026-09-06: Verify explicitly null optional fields follow the documented null policy without becoming the literal string "null" in persisted lead data, notifications, or deduplication inputs.
 - 2026-09-06: Verify a required synthetic text field that becomes empty after trimming is rejected before deduplication, persistence, retry allocation, or notification rendering.
 - 2026-09-06: Verify valid synthetic JSON with only trailing transport whitespace is parsed consistently and does not create different deduplication or persistence behavior from the same canonical payload.
+- 2026-09-06: Verify reusing one synthetic idempotency key with a materially different payload is rejected deterministically rather than overwriting the original lead or sending a second notification.
