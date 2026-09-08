@@ -66,3 +66,4 @@
 - 2026-09-06: Verify valid synthetic JSON with only trailing transport whitespace is parsed consistently and does not create different deduplication or persistence behavior from the same canonical payload.
 - 2026-09-06: Verify reusing one synthetic idempotency key with a materially different payload is rejected deterministically rather than overwriting the original lead or sending a second notification.
 - 2026-09-07: Verify a synthetic boolean supplied where a text field is expected is rejected before normalization, deduplication, persistence, retry allocation, or notification rendering.
+- 2026-09-08: Verify a synthetic request with a mismatched Content-Length is rejected at the transport boundary without parsing or creating lead, deduplication, retry, persistence, or notification state.
