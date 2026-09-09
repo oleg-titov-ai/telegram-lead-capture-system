@@ -68,3 +68,4 @@
 - 2026-09-07: Verify a synthetic boolean supplied where a text field is expected is rejected before normalization, deduplication, persistence, retry allocation, or notification rendering.
 - 2026-09-08: Verify a synthetic request with a mismatched Content-Length is rejected at the transport boundary without parsing or creating lead, deduplication, retry, persistence, or notification state.
 - 2026-09-08: Verify `application/json; charset=utf-8` is handled the same as canonical JSON content type for a synthetic payload, without changing deduplication, persistence, or notification semantics.
+- 2026-09-09: Verify a synthetic JSON request containing invalid UTF-8 bytes is rejected before JSON parsing, deduplication, persistence, retry allocation, or notification rendering, with a generic non-sensitive error response.
