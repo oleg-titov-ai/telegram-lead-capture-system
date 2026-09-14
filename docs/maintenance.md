@@ -1,5 +1,7 @@
 # Maintenance
 
+> Current maintenance focus (2026-09-14): enforce request-boundary validation before normalization, deduplication, persistence, or notification so malformed input leaves no partial state.
+
 - 2026-08-19: Keep demo reset verification in the release checklist: a clean portfolio run should start with no stale leads, dialog state, correlation IDs, or pending notification retries.
 - 2026-08-20: Verify the demo reset also restores the documented seed lead/form state so a fresh walkthrough starts from the same reproducible baseline every time.
 - 2026-08-20: Keep demo notification examples limited to synthetic contact data and verify no real phone numbers, usernames, or chat identifiers appear in screenshots or logs.
