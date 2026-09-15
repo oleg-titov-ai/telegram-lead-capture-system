@@ -1,6 +1,6 @@
 # Maintenance
 
-> Current maintenance focus (2026-09-14): validate transport framing and media type before decode, normalization, deduplication, persistence, or notification so rejected requests allocate no idempotency, retry, or lead state.
+> Current maintenance focus (2026-09-15): reject unsupported transfer or content encodings at the request boundary before body decode, normalization, deduplication, persistence, or notification so malformed transport cannot allocate lead or retry state.
 
 - 2026-08-19: Keep demo reset verification in the release checklist: a clean portfolio run should start with no stale leads, dialog state, correlation IDs, or pending notification retries.
 - 2026-08-20: Verify the demo reset also restores the documented seed lead/form state so a fresh walkthrough starts from the same reproducible baseline every time.
