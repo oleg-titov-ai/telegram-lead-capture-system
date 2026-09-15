@@ -1,6 +1,6 @@
 # Maintenance
 
-> Current maintenance focus (2026-09-15): reject unsupported transfer or content encodings at the request boundary before body decode, normalization, deduplication, persistence, or notification so malformed transport cannot allocate lead or retry state.
+> Current maintenance focus (2026-09-15): bound request-body size and read time at the transport boundary, rejecting incomplete, slow, or unsupported bodies before decode, normalization, deduplication, persistence, or notification so no lead or retry state is allocated prematurely.
 
 - 2026-08-19: Keep demo reset verification in the release checklist: a clean portfolio run should start with no stale leads, dialog state, correlation IDs, or pending notification retries.
 - 2026-08-20: Verify the demo reset also restores the documented seed lead/form state so a fresh walkthrough starts from the same reproducible baseline every time.
