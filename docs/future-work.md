@@ -11,7 +11,7 @@ Small improvements to consider next.
 
 ## Medium Term
 
-- Add payload validation notes.
+- Document transport-level rejection before payload parsing.
 - Add consent notes.
 - Add delivery failure notes.
 - Add an onboarding checklist.
