@@ -123,4 +123,4 @@ Use this checklist to deploy a demo or production version.
 - [ ] Search repository for private webhook URLs.
 - [ ] Search repository for real customer data.
 - [ ] Confirm demo form examples use placeholder names, emails, and phone numbers only.
-- [ ] Keep production `.env` files out of GitHub.
+- [ ] Confirm partial uploads and client disconnects are rejected before any lead or retry state is created.
