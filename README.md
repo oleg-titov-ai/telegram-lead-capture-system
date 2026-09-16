@@ -260,3 +260,5 @@ Maintenance note: after an end-to-end demo, verify the website response, stored 
 Maintenance note: verify a completed demo reset leaves zero pending retries before the next portfolio walkthrough begins.
 
 Maintenance note: verify a rejected synthetic webhook does not increment demo lead or notification counters.
+
+Maintenance note: verify an aborted or partial request-body upload creates no lead, retry, deduplication, or notification state.
