@@ -13,6 +13,7 @@ Small improvements to consider next.
 
 - Document transport-level rejection before payload parsing.
 - Document request-body timeout and client-disconnect behavior alongside validation examples.
+- Document a single generic error contract for transport-level rejections so malformed uploads return stable, non-sensitive status codes.
 - Add consent notes.
 - Add delivery failure notes.
 - Add an onboarding checklist.
