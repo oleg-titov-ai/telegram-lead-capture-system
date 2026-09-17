@@ -12,6 +12,7 @@ Small improvements to consider next.
 ## Medium Term
 
 - Document transport-level rejection before payload parsing.
+- Document request-body timeout and client-disconnect behavior alongside validation examples.
 - Add consent notes.
 - Add delivery failure notes.
 - Add an onboarding checklist.
