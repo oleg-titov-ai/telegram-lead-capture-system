@@ -265,4 +265,4 @@ Maintenance note: verify an aborted or partial request-body upload creates no le
 
 Maintenance note: verify request-body limits and decode failures release transport resources before any lead or retry state is allocated.
 
-Maintenance note: verify requests rejected at the transport boundary do not increment accepted-lead, retry, or notification metrics.
+Maintenance note: verify transport-boundary rejections do not increment accepted-lead, retry, or notification metrics and return only a generic client-safe error.
