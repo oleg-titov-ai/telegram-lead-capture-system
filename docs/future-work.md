@@ -16,7 +16,7 @@ Small improvements to consider next.
 - Document a single generic error contract for transport-level rejections so malformed uploads return stable, non-sensitive status codes.
 - Document an explicit `Content-Encoding` allowlist and reject unsupported encodings before payload decoding.
 - Document that transport-level rejections do not increment accepted-lead, retry, or notification metrics.
-- Document separate wire and decoded body-size limits, and include a compressed-payload example that rejects an oversized decoded request without incrementing accepted-lead or notification metrics.
+- Document separate wire and decoded body-size limits, and include a compressed-payload example that rejects an oversized decoded request before parsing without incrementing accepted-lead or notification metrics.
 - Add consent notes.
 - Add delivery failure notes.
 - Add an onboarding checklist.
