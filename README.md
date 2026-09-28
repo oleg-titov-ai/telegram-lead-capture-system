@@ -268,3 +268,5 @@ Maintenance note: verify request-body limits and decode failures release transpo
 Maintenance note: verify transport-boundary rejections do not increment accepted-lead, retry, or notification metrics and return only a generic client-safe error.
 
 Maintenance note: verify a successful replay of the same synthetic submission preserves one lead and one manager notification.
+
+Maintenance note: verify a compressed request that exceeds the decoded-size limit is rejected before parsing and before any retry or notification state is created.
