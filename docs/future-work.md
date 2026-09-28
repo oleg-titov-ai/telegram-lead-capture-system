@@ -20,6 +20,7 @@ Small improvements to consider next.
 - Add consent notes.
 - Add delivery failure notes.
 - Add an onboarding checklist.
+- Add a bounded replay example showing duplicate lead submissions remain idempotent.
 
 ## Portfolio
 
