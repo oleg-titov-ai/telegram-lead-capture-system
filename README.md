@@ -270,3 +270,5 @@ Maintenance note: verify transport-boundary rejections do not increment accepted
 Maintenance note: verify a successful replay of the same synthetic submission preserves one lead and one manager notification.
 
 Maintenance note: verify a compressed request that exceeds the decoded-size limit is rejected before parsing and before any retry or notification state is created.
+
+Maintenance note: verify malformed compressed input returns only a generic client-safe error without incrementing lead or notification metrics.
