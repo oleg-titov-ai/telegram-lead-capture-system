@@ -272,3 +272,5 @@ Maintenance note: verify a successful replay of the same synthetic submission pr
 Maintenance note: verify a compressed request that exceeds the decoded-size limit is rejected before parsing and before any retry or notification state is created.
 
 Maintenance note: verify malformed compressed input returns only a generic client-safe error without incrementing lead or notification metrics.
+
+Maintenance note: verify request-body limits reject oversized input before allocating lead, retry, or notification state.
