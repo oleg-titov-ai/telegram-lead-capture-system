@@ -26,3 +26,5 @@ Small improvements to consider next.
 
 - Keep privacy notes visible.
 - Show the system flow clearly.
+
+Maintenance note: verify unsupported content encodings are rejected before parsing without creating lead, retry, or notification state.
