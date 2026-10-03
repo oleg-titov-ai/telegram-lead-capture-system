@@ -28,3 +28,5 @@ Small improvements to consider next.
 - Show the system flow clearly.
 
 Maintenance note: verify unsupported content encodings are rejected before parsing without creating lead, retry, or notification state.
+
+Maintenance note: verify replaying one synthetic request with the same idempotency key returns a consistent response without duplicating lead or notification state.
