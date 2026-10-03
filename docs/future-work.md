@@ -34,3 +34,5 @@ Maintenance note: verify replaying one synthetic request with the same idempoten
 Maintenance note: verify reusing an idempotency key with a different synthetic payload returns a safe conflict without changing stored lead state.
 
 Maintenance note: verify malformed UTF-8 input is rejected with a generic response before lead normalization or notification work begins.
+
+Maintenance note: verify unsupported request content types are rejected before normalization without creating lead or notification state.
