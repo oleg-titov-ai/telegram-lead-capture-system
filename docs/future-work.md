@@ -38,3 +38,5 @@ Maintenance note: verify malformed UTF-8 input is rejected with a generic respon
 Maintenance note: verify unsupported request content types are rejected before normalization without creating lead or notification state.
 
 Maintenance note: document and test the maximum accepted payload size before request parsing so rejection behavior stays predictable.
+
+Maintenance note: verify malformed Unicode input is rejected or normalized without altering valid lead fields.
