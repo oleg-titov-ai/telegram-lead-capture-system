@@ -40,3 +40,5 @@ Maintenance note: verify unsupported request content types are rejected before n
 Maintenance note: document and test the maximum accepted payload size before request parsing so rejection behavior stays predictable.
 
 Maintenance note: verify malformed Unicode input is rejected or normalized without altering valid lead fields.
+
+Maintenance note: document the deduplication key and retention window used to make webhook retries safe.
