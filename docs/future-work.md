@@ -36,3 +36,5 @@ Maintenance note: verify reusing an idempotency key with a different synthetic p
 Maintenance note: verify malformed UTF-8 input is rejected with a generic response before lead normalization or notification work begins.
 
 Maintenance note: verify unsupported request content types are rejected before normalization without creating lead or notification state.
+
+Maintenance note: document and test the maximum accepted payload size before request parsing so rejection behavior stays predictable.
