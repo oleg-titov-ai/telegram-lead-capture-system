@@ -42,3 +42,5 @@ Maintenance note: document and test the maximum accepted payload size before req
 Maintenance note: verify malformed Unicode input is rejected or normalized without altering valid lead fields.
 
 Maintenance note: document the deduplication key and retention window used to make webhook retries safe.
+
+Maintenance note: document when abandoned lead-capture conversations expire and which non-sensitive state is cleared.
