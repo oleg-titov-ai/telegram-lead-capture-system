@@ -44,3 +44,5 @@ Maintenance note: verify malformed Unicode input is rejected or normalized witho
 Maintenance note: document the deduplication key and retention window used to make webhook retries safe.
 
 Maintenance note: document when abandoned lead-capture conversations expire and which non-sensitive state is cleared.
+
+Maintenance note: document rate-limit responses and retry timing so repeated requests cannot create duplicate lead state.
