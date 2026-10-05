@@ -52,3 +52,5 @@ Maintenance note: document the consent-policy version and timestamp recorded bef
 Maintenance note: verify structured logs omit contact fields while retaining request IDs and safe processing outcomes.
 
 Maintenance note: document notification retry limits and the safe terminal status used after repeated delivery failures.
+
+- Document the transaction boundary between lead persistence and notification enqueueing so retries cannot produce inconsistent states.
