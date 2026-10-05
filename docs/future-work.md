@@ -48,3 +48,5 @@ Maintenance note: document when abandoned lead-capture conversations expire and 
 Maintenance note: document rate-limit responses and retry timing so repeated requests cannot create duplicate lead state.
 
 Maintenance note: document the consent-policy version and timestamp recorded before a lead is persisted.
+
+Maintenance note: verify structured logs omit contact fields while retaining request IDs and safe processing outcomes.
