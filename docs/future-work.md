@@ -46,3 +46,5 @@ Maintenance note: document the deduplication key and retention window used to ma
 Maintenance note: document when abandoned lead-capture conversations expire and which non-sensitive state is cleared.
 
 Maintenance note: document rate-limit responses and retry timing so repeated requests cannot create duplicate lead state.
+
+Maintenance note: document the consent-policy version and timestamp recorded before a lead is persisted.
