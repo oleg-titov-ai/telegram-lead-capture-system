@@ -50,3 +50,5 @@ Maintenance note: document rate-limit responses and retry timing so repeated req
 Maintenance note: document the consent-policy version and timestamp recorded before a lead is persisted.
 
 Maintenance note: verify structured logs omit contact fields while retaining request IDs and safe processing outcomes.
+
+Maintenance note: document notification retry limits and the safe terminal status used after repeated delivery failures.
