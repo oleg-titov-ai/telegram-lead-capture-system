@@ -64,3 +64,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how notification recipients are validated before dispatch so configuration mistakes fail safely and remain observable.
 
 - Define a concise operator checklist for reviewing and replaying notification jobs that reached a retry limit.
+
+- Document how duplicate form submissions are linked to an existing lead without overwriting newer contact details.
