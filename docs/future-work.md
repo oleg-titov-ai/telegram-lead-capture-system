@@ -56,3 +56,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document the transaction boundary between lead persistence and notification enqueueing so retries cannot produce inconsistent states.
 
 - Define a recovery procedure for leads persisted successfully when notification delivery is temporarily unavailable.
+
+- Document retention and cleanup rules for abandoned lead-capture sessions that never reach final submission.
