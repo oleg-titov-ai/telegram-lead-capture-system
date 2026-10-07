@@ -66,3 +66,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Define a concise operator checklist for reviewing and replaying notification jobs that reached a retry limit.
 
 - Document how duplicate form submissions are linked to an existing lead without overwriting newer contact details.
+
+- Define how stale draft leads are distinguished from active conversations before automated cleanup.
