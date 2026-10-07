@@ -68,3 +68,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how duplicate form submissions are linked to an existing lead without overwriting newer contact details.
 
 - Define how stale draft leads are distinguished from active conversations before automated cleanup.
+
+- Document the audit trail required when an operator manually corrects or resubmits a captured lead.
