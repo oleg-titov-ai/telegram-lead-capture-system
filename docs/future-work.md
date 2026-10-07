@@ -74,3 +74,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how consent status is preserved when a user resumes an incomplete lead-capture conversation.
 
 - Document how contact-field corrections are validated before replacing values on an existing lead.
+
+- Document how queued notifications are handled when the configured recipient changes before delivery.
