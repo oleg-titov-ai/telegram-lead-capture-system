@@ -78,3 +78,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how queued notifications are handled when the configured recipient changes before delivery.
 
 - Document how a queued notification is refreshed or cancelled when lead details are corrected before delivery.
+
+- Document which lead fields are snapshotted when a notification is queued and which are resolved again at delivery time.
