@@ -82,3 +82,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document which lead fields are snapshotted when a notification is queued and which are resolved again at delivery time.
 
 - Document how notification retries react when a lead is withdrawn or marked invalid after the first delivery attempt.
+
+- Document the consent and data-freshness checks required before replaying a notification from the dead-letter queue.
