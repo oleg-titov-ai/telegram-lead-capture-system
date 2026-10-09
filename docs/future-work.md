@@ -86,3 +86,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document the consent and data-freshness checks required before replaying a notification from the dead-letter queue.
 
 - Document how final lead status is preserved when the notification channel becomes unavailable during submission.
+
+- Document how notification deduplication is preserved when delivery moves to a replacement recipient group.
