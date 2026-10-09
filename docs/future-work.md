@@ -92,3 +92,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document the non-sensitive audit event recorded when a notification destination is changed by an operator.
 
 - Document the maximum notification-queue age and the review required before an expired item can be replayed.
+
+- Document how notification state is reconciled when delivery acknowledgement arrives after the worker timeout.
