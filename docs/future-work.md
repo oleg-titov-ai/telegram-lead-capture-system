@@ -94,3 +94,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document the maximum notification-queue age and the review required before an expired item can be replayed.
 
 - Document how notification state is reconciled when delivery acknowledgement arrives after the worker timeout.
+
+- Document recovery when a Telegram webhook is retried after acknowledgement but the related database transaction did not commit.
