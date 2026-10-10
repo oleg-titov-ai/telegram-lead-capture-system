@@ -96,3 +96,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how notification state is reconciled when delivery acknowledgement arrives after the worker timeout.
 
 - Document recovery when a Telegram webhook is retried after acknowledgement but the related database transaction did not commit.
+
+- Document how lead edits are reconciled when contact details change while the owner notification is still queued.
