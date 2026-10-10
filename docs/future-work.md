@@ -100,3 +100,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how lead edits are reconciled when contact details change while the owner notification is still queued.
 
 - Document contact-field normalization and validation without retaining rejected raw phone numbers or email addresses.
+
+- Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data.
