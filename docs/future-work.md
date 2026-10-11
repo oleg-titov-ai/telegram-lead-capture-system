@@ -104,3 +104,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data.
 
 - Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt.
+
+- Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead.
