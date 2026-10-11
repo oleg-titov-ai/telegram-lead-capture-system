@@ -110,3 +110,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document recording consent source and timestamp without retaining the original message body in operational logs.
 
 - Document notification routing recovery when a Telegram group is migrated and receives a replacement chat identifier.
+
+- Document how pending owner notifications are revalidated when a lead is deleted or withdrawn before delivery.
