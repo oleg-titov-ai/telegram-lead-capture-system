@@ -106,3 +106,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt.
 
 - Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead.
+
+- Document recording consent source and timestamp without retaining the original message body in operational logs.
