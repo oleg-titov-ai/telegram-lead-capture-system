@@ -116,3 +116,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-group permission checks after administrator roles change so lead notifications do not fail silently.
 
 - Document safe webhook-secret rotation with an overlap window that avoids dropping incoming lead submissions.
+
+- Document queue backpressure and notification prioritization when Telegram rate limits delay owner alerts.
