@@ -118,3 +118,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document safe webhook-secret rotation with an overlap window that avoids dropping incoming lead submissions.
 
 - Document queue backpressure and notification prioritization when Telegram rate limits delay owner alerts.
+
+- Document retention and cleanup of abandoned lead conversations that never reach final consent or submission.
