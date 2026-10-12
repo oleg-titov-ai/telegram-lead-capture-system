@@ -120,3 +120,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document queue backpressure and notification prioritization when Telegram rate limits delay owner alerts.
 
 - Document retention and cleanup of abandoned lead conversations that never reach final consent or submission.
+
+- Document privacy-safe owner notification templates that expose only the contact details required for follow-up.
