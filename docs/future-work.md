@@ -124,3 +124,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document privacy-safe owner notification templates that expose only the contact details required for follow-up.
 
 - Document escalation for owner notifications that remain queued beyond the expected delivery window.
+
+- Document canonical international phone formatting while preserving the user's original value only where operationally necessary.
