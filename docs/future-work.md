@@ -125,7 +125,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document escalation for owner notifications that remain queued beyond the expected delivery window.
 
-- Document canonical international phone formatting while preserving the user's original value only where operationally necessary.
+- Document canonical international phone formatting while preserving the user's original value only where operationally necessary; use synthetic examples for country prefixes, separators, and invalid input, with expected normalized values or validation errors and no raw numbers in logs.
 
 - Document verification of public bot links after a username change so website entry points do not become stale; check both visible link text and destination, preserving any intended start parameter without submitting a real lead.
 
