@@ -133,4 +133,4 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document idempotent owner-notification delivery when a worker restarts after Telegram accepts a message but before local acknowledgement is stored.
 
-- Document how opt-out requests are handled when a lead later restarts the flow from a shared Telegram account.
+- Document how opt-out requests are handled when a lead later restarts the flow from a shared Telegram account; use synthetic contacts to verify that restarting alone does not restore consent or reveal an earlier lead's details.
