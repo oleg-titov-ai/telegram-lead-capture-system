@@ -131,6 +131,6 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document safe escaping of user-supplied text in owner notifications; include synthetic angle brackets, ampersands, and Markdown punctuation, with expected literal rendering for the configured Telegram parse mode.
 
-- Document idempotent owner-notification delivery when a worker restarts after Telegram accepts a message but before local acknowledgement is stored.
+- Document idempotent owner-notification delivery when a worker restarts after Telegram accepts a message but before local acknowledgement is stored; use a synthetic accepted response and stable delivery key to specify recovery behavior and verify the restart does not produce a second owner alert.
 
 - Document how opt-out requests are handled when a lead later restarts the flow from a shared Telegram account; use synthetic contacts to verify that restarting alone does not restore consent or reveal an earlier lead's details.
