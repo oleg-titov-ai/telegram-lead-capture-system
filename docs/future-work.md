@@ -123,7 +123,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document privacy-safe owner notification templates that expose only the contact details required for follow-up.
 
-- Document escalation for owner notifications that remain queued beyond the expected delivery window.
+- Document escalation for owner notifications that remain queued beyond the expected delivery window; specify the threshold and use synthetic queue entries just below and above it to verify one redacted alert per overdue notification.
 
 - Document canonical international phone formatting while preserving the user's original value only where operationally necessary; use synthetic examples for country prefixes, separators, and invalid input, with expected normalized values or validation errors and no raw numbers in logs.
 
