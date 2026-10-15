@@ -121,7 +121,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document retention and cleanup of abandoned lead conversations that never reach final consent or submission.
 
-- Document privacy-safe owner notification templates that expose only the contact details required for follow-up.
+- Document privacy-safe owner notification templates that expose only the contact details required for follow-up; include a synthetic example and an explicit included/omitted field list, keeping consent evidence and internal diagnostics out of the message.
 
 - Document escalation for owner notifications that remain queued beyond the expected delivery window; specify the threshold and use synthetic queue entries just below and above it to verify one redacted alert per overdue notification.
 
