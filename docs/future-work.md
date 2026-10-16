@@ -113,7 +113,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how pending owner notifications are revalidated when a lead is deleted or withdrawn before delivery.
 
-- Document owner-group permission checks after administrator roles change so lead notifications do not fail silently.
+- Document owner-group permission checks after administrator roles change so lead notifications do not fail silently; mock allowed, send-denied, and group-unavailable responses to specify queue preservation and a redacted operator alert without sending real lead data.
 
 - Document safe webhook-secret rotation with an overlap window that avoids dropping incoming lead submissions; use synthetic old and new secrets to verify both work only during overlap, the old value is rejected after cutover, and no secret value appears in logs.
 
