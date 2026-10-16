@@ -111,7 +111,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document notification routing recovery when a Telegram group is migrated and receives a replacement chat identifier.
 
-- Document how pending owner notifications are revalidated when a lead is deleted or withdrawn before delivery.
+- Document how pending owner notifications are revalidated when a lead is deleted or withdrawn before delivery; use synthetic queued leads to specify a final eligibility check, cancellation of stale notifications, and a redacted outcome that retains no contact payload.
 
 - Document owner-group permission checks after administrator roles change so lead notifications do not fail silently; mock allowed, send-denied, and group-unavailable responses to specify queue preservation and a redacted operator alert without sending real lead data.
 
