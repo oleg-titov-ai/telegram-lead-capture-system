@@ -107,7 +107,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead.
 
-- Document recording consent source and timestamp without retaining the original message body in operational logs.
+- Document recording consent source and timestamp without retaining the original message body in operational logs; define the source label and UTC timestamp format using a synthetic consent event, and specify how missing consent evidence blocks submission without logging message text.
 
 - Document notification routing recovery when a Telegram group is migrated and receives a replacement chat identifier; mock the migration response to specify authorized destination mapping, persistence across restart, and one queued notification delivery without logging real chat identifiers or lead payloads.
 
