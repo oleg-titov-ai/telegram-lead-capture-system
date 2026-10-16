@@ -119,7 +119,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document queue backpressure and notification prioritization when Telegram rate limits delay owner alerts; use synthetic queues below and above the threshold to specify priority classes, FIFO behavior within each class, Retry-After handling, and redacted backlog metrics.
 
-- Document retention and cleanup of abandoned lead conversations that never reach final consent or submission.
+- Document retention and cleanup of abandoned lead conversations that never reach final consent or submission; define the expiry clock and retained fields, then use synthetic expired and active sessions to verify cleanup does not remove in-progress submissions or log contact details.
 
 - Document privacy-safe owner notification templates that expose only the contact details required for follow-up; include a synthetic example and an explicit included/omitted field list, keeping consent evidence and internal diagnostics out of the message.
 
