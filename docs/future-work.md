@@ -103,7 +103,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data.
 
-- Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt.
+- Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt; use mocked owner interaction to define reactivation, recheck consent and lead validity before replay, and verify a previously delivered notification is not sent again.
 
 - Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead; use a consented synthetic repeat submission to define the matching key, field-update precedence, and owner-notification decision without merging distinct contacts or reviving withdrawn consent.
 
