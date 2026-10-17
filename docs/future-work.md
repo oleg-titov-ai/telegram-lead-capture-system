@@ -99,7 +99,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how lead edits are reconciled when contact details change while the owner notification is still queued.
 
-- Document contact-field normalization and validation without retaining rejected raw phone numbers or email addresses.
+- Document contact-field normalization and validation without retaining rejected raw phone numbers or email addresses; use synthetic malformed phone and email inputs to specify user-facing validation codes and verify raw rejected values do not enter logs, dead-letter records, or notification payloads.
 
 - Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data; use synthetic failures to define retained status fields, expiry, and cleanup checks, excluding raw contact payloads and revalidating consent before any operator-approved replay.
 
