@@ -101,7 +101,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document contact-field normalization and validation without retaining rejected raw phone numbers or email addresses.
 
-- Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data.
+- Document dead-letter retention and redaction rules so failed lead notifications do not preserve unnecessary contact data; use synthetic failures to define retained status fields, expiry, and cleanup checks, excluding raw contact payloads and revalidating consent before any operator-approved replay.
 
 - Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt; use mocked owner interaction to define reactivation, recheck consent and lead validity before replay, and verify a previously delivered notification is not sent again.
 
