@@ -105,7 +105,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document notification-state recovery after an owner unblocks the bot following a failed delivery attempt.
 
-- Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead.
+- Document duplicate-contact reconciliation when a user restarts the chat and resubmits an existing lead; use a consented synthetic repeat submission to define the matching key, field-update precedence, and owner-notification decision without merging distinct contacts or reviving withdrawn consent.
 
 - Document recording consent source and timestamp without retaining the original message body in operational logs; define the source label and UTC timestamp format using a synthetic consent event, and specify how missing consent evidence blocks submission without logging message text.
 
