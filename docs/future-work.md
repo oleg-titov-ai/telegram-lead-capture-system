@@ -97,7 +97,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document recovery when a Telegram webhook is retried after acknowledgement but the related database transaction did not commit.
 
-- Document how lead edits are reconciled when contact details change while the owner notification is still queued.
+- Document how lead edits are reconciled when contact details change while the owner notification is still queued; use synthetic before-and-after revisions to specify which version is sent, recheck consent immediately before delivery, and prevent stale contact details from appearing in retries.
 
 - Document contact-field normalization and validation without retaining rejected raw phone numbers or email addresses; use synthetic malformed phone and email inputs to specify user-facing validation codes and verify raw rejected values do not enter logs, dead-letter records, or notification payloads.
 
