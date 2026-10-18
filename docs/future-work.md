@@ -87,7 +87,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how final lead status is preserved when the notification channel becomes unavailable during submission.
 
-- Document how notification deduplication is preserved when delivery moves to a replacement recipient group.
+- Document how notification deduplication is preserved when delivery moves to a replacement recipient group; use synthetic delivered, pending, and unknown-outcome records to define migration eligibility, retain a stable notification key, and prevent changing the destination from resetting confirmed delivery state.
 
 - Document the non-sensitive audit event recorded when a notification destination is changed by an operator; define timestamp, authorized operator role, opaque destination aliases, reason, and outcome using a synthetic change, excluding raw chat identifiers, credentials, and lead payloads.
 
