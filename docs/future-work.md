@@ -93,7 +93,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document the maximum notification-queue age and the review required before an expired item can be replayed.
 
-- Document how notification state is reconciled when delivery acknowledgement arrives after the worker timeout.
+- Document how notification state is reconciled when delivery acknowledgement arrives after the worker timeout; use a synthetic delayed success response to define the delivery-key state transition, suppress a queued duplicate retry, and keep unresolved timeouts distinct from confirmed delivery without logging contact payloads.
 
 - Document recovery when persistence fails around Telegram webhook acknowledgement; use a synthetic transaction failure to specify acknowledgement only after durable commit, duplicate-update handling on retry, and reconciliation for prematurely acknowledged failures without assuming Telegram will redeliver them.
 
