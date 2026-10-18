@@ -89,7 +89,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how notification deduplication is preserved when delivery moves to a replacement recipient group.
 
-- Document the non-sensitive audit event recorded when a notification destination is changed by an operator.
+- Document the non-sensitive audit event recorded when a notification destination is changed by an operator; define timestamp, authorized operator role, opaque destination aliases, reason, and outcome using a synthetic change, excluding raw chat identifiers, credentials, and lead payloads.
 
 - Document the maximum notification-queue age and the review required before an expired item can be replayed; use synthetic entries just below, at, and above expiry to define eligibility, requiring current consent and operator approval for replay without resetting age automatically on retry.
 
