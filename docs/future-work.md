@@ -85,7 +85,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document the consent and data-freshness checks required before replaying a notification from the dead-letter queue.
 
-- Document how final lead status is preserved when the notification channel becomes unavailable during submission.
+- Document how final lead status is preserved when the notification channel becomes unavailable during submission; use a synthetic committed lead and mocked channel outage to distinguish accepted submission from pending notification, preserving the lead identifier and preventing a delivery failure from creating a second lead on retry.
 
 - Document how notification deduplication is preserved when delivery moves to a replacement recipient group; use synthetic delivered, pending, and unknown-outcome records to define migration eligibility, retain a stable notification key, and prevent changing the destination from resetting confirmed delivery state.
 
