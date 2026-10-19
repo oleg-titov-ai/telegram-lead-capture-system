@@ -57,8 +57,6 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Define a recovery procedure for leads persisted successfully when notification delivery is temporarily unavailable.
 
-- Document retention and cleanup rules for abandoned lead-capture sessions that never reach final submission.
-
 - Define validation behavior for incomplete contact details so recoverable leads remain editable without entering the notification queue.
 
 - Document how notification recipients are validated before dispatch so configuration mistakes fail safely and remain observable.
