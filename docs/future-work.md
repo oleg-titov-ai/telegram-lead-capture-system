@@ -27,6 +27,10 @@ Small improvements to consider next.
 - Keep privacy notes visible.
 - Show the system flow clearly.
 
+## Maintenance verification backlog
+
+These are proposed checks, not evidence of implemented or verified behavior. Record synthetic inputs and observed outcomes when checking an item, and keep unperformed checks explicitly untested.
+
 Maintenance note: verify unsupported content encodings are rejected before parsing without creating lead, retry, or notification state.
 
 Maintenance note: verify replaying one synthetic request with the same idempotency key returns a consistent response without duplicating lead or notification state.
