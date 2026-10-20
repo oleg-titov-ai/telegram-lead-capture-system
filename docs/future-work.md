@@ -57,7 +57,7 @@ Maintenance note: verify structured logs omit contact fields while retaining req
 
 Maintenance note: document notification retry limits and the safe terminal status used after repeated delivery failures.
 
-- Document the transaction boundary between lead persistence and notification enqueueing so retries cannot produce inconsistent states.
+- Document the transaction boundary between lead persistence and notification enqueueing; inject synthetic failures before and after that boundary to specify rollback or recovery, verifying each accepted lead retains exactly one notification intent rather than assuming two separate writes are atomic.
 
 - Define a recovery procedure for leads persisted successfully when notification delivery is temporarily unavailable.
 
