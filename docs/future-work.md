@@ -75,7 +75,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how consent status is preserved when a user resumes an incomplete lead-capture conversation; compare synthetic granted, missing, and withdrawn consent states, requiring renewed consent where needed rather than treating conversation resumption as permission to submit or notify.
 
-- Document how contact-field corrections are validated before replacing values on an existing lead.
+- Document validation of contact-field corrections using synthetic valid and rejected edits; specify that rejected edits preserve the saved revision and queued notification state, with no partially applied contact changes or raw rejected values in logs.
 
 - Document how queued notifications are handled when the configured recipient changes before delivery.
 
