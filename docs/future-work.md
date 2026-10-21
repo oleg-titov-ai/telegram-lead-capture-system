@@ -79,7 +79,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how queued notifications are handled when the configured recipient changes before delivery; use synthetic old and new destinations to define whether routing is snapshotted or re-resolved, require authorization validation at send time, and prevent fallback to an obsolete recipient without logging chat identifiers or lead payloads.
 
-- Document which lead fields are snapshotted when a notification is queued and which are resolved again at delivery time.
+- Document which lead fields are snapshotted when a notification is queued and which are resolved again at delivery time; use a synthetic lead edited after enqueue to define immutable consent and submission evidence, refreshable contact fields, revision identifiers, and suppression when delivery-time validation fails.
 
 - Document how notification retries react when a lead is withdrawn or marked invalid after the first delivery attempt.
 
