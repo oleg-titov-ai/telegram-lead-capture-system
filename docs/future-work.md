@@ -71,7 +71,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Define how stale draft leads are distinguished from active conversations before automated cleanup.
 
-- Document the audit trail required when an operator manually corrects or resubmits a captured lead.
+- Document the audit trail required when an operator manually corrects or resubmits a captured lead; use synthetic edits to record timestamp, operator role, reason, changed field names, source revision, and resulting notification action without storing previous or replacement contact values in public diagnostics.
 
 - Document how consent status is preserved when a user resumes an incomplete lead-capture conversation; compare synthetic granted, missing, and withdrawn consent states, requiring renewed consent where needed rather than treating conversation resumption as permission to submit or notify.
 
