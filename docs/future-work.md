@@ -11,7 +11,7 @@ Small improvements to consider next.
 
 ## Medium Term
 
-- Document transport-level rejection before payload parsing.
+- Document transport-level rejection before payload parsing; use synthetic oversized, truncated, and malformed-framing requests to specify the stable status and redacted diagnostic, verifying that decoding, lead persistence, notification enqueueing, and accepted-lead metrics are never reached.
 - Document request-body timeout and client-disconnect behavior alongside validation examples; use synthetic uploads that finish within the limit, time out before parsing, and disconnect after a partial body to specify the status and redacted diagnostic, with incomplete payloads discarded before any lead is created or updated.
 - Document a single generic error contract for transport-level rejections so malformed uploads return stable, non-sensitive status codes.
 - Document an explicit `Content-Encoding` allowlist and reject unsupported encodings before payload decoding.
