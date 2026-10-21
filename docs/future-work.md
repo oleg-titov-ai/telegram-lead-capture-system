@@ -77,7 +77,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document validation of contact-field corrections using synthetic valid and rejected edits; specify that rejected edits preserve the saved revision and queued notification state, with no partially applied contact changes or raw rejected values in logs.
 
-- Document how queued notifications are handled when the configured recipient changes before delivery.
+- Document how queued notifications are handled when the configured recipient changes before delivery; use synthetic old and new destinations to define whether routing is snapshotted or re-resolved, require authorization validation at send time, and prevent fallback to an obsolete recipient without logging chat identifiers or lead payloads.
 
 - Document which lead fields are snapshotted when a notification is queued and which are resolved again at delivery time.
 
