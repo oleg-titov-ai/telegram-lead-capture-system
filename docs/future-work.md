@@ -83,7 +83,7 @@ Maintenance note: document notification retry limits and the safe terminal statu
 
 - Document how notification retries react when a lead is withdrawn or marked invalid after the first delivery attempt.
 
-- Document the consent and data-freshness checks required before replaying a notification from the dead-letter queue.
+- Document the consent and data-freshness checks required before replaying a notification from the dead-letter queue; use synthetic active, withdrawn, expired, and edited leads to define operator approval, delivery-time revalidation, a new replay attempt identifier, and cancellation without restoring stale contact payloads.
 
 - Document how final lead status is preserved when the notification channel becomes unavailable during submission; use a synthetic committed lead and mocked channel outage to distinguish accepted submission from pending notification, preserving the lead identifier and preventing a delivery failure from creating a second lead on retry.
 
