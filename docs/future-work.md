@@ -136,3 +136,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how opt-out requests are handled when a lead later restarts the flow from a shared Telegram account; use synthetic contacts to verify that restarting alone does not restore consent or reveal an earlier lead's details.
 
 - Document link-preview suppression for owner notifications so URL-like user input cannot trigger unintended external fetches or misleading preview cards; use synthetic reserved-domain text to verify literal escaped rendering, disabled previews, and unchanged delivery status without contacting the destination.
+
+- Document owner-notification behavior when escaped lead text approaches Telegram message-length limits; use synthetic below, at, and above-limit payloads to specify safe splitting or rejection, preserve field labels and delivery keys, and ensure contact data is neither silently truncated nor duplicated across parts.
