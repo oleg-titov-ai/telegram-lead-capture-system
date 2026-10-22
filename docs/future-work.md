@@ -14,7 +14,7 @@ Small improvements to consider next.
 - Document transport-level rejection before payload parsing; use synthetic oversized, truncated, and malformed-framing requests to specify the stable status and redacted diagnostic, verifying that decoding, lead persistence, notification enqueueing, and accepted-lead metrics are never reached.
 - Document request-body timeout and client-disconnect behavior alongside validation examples; use synthetic uploads that finish within the limit, time out before parsing, and disconnect after a partial body to specify the status and redacted diagnostic, with incomplete payloads discarded before any lead is created or updated.
 - Document a single generic error contract for transport-level rejections so malformed uploads return stable, non-sensitive status codes.
-- Document an explicit `Content-Encoding` allowlist and reject unsupported encodings before payload decoding.
+- Document an explicit `Content-Encoding` allowlist and reject unsupported encodings before payload decoding; use synthetic identity, supported compressed, stacked, unknown, and malformed values to specify normalized matching, stable rejection status, size-limit order, and redacted diagnostics without retaining request bodies.
 - Document that transport-level rejections do not increment accepted-lead, retry, or notification metrics.
 - Document separate wire and decoded body-size limits, with a compressed-payload example that rejects an oversized decoded request before parsing and leaves accepted-lead, retry, and notification metrics unchanged.
 - Add consent notes.
