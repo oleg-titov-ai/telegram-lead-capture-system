@@ -134,3 +134,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document idempotent owner-notification delivery when a worker restarts after Telegram accepts a message but before local acknowledgement is stored; use a synthetic accepted response and stable delivery key to specify recovery behavior and verify the restart does not produce a second owner alert.
 
 - Document how opt-out requests are handled when a lead later restarts the flow from a shared Telegram account; use synthetic contacts to verify that restarting alone does not restore consent or reveal an earlier lead's details.
+
+- Document link-preview suppression for owner notifications so URL-like user input cannot trigger unintended external fetches or misleading preview cards; use synthetic reserved-domain text to verify literal escaped rendering, disabled previews, and unchanged delivery status without contacting the destination.
