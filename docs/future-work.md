@@ -138,3 +138,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document link-preview suppression for owner notifications so URL-like user input cannot trigger unintended external fetches or misleading preview cards; use synthetic reserved-domain text to verify literal escaped rendering, disabled previews, and unchanged delivery status without contacting the destination.
 
 - Document owner-notification behavior when escaped lead text approaches Telegram message-length limits; use synthetic below, at, and above-limit payloads to specify safe splitting or rejection, preserve field labels and delivery keys, and ensure contact data is neither silently truncated nor duplicated across parts.
+
+- Document how unsupported photos, documents, voice notes, and other attachments are handled during lead capture; use synthetic Telegram updates to specify a text-only clarification prompt, no attachment download or persistence, and no advancement of the five-question flow.
