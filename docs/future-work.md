@@ -146,3 +146,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how Telegram edited-message updates affect an in-progress or already submitted lead; use synthetic edits before validation, after consent, and after durable submission to define accepted corrections versus a new-flow prompt without silently rewriting delivered owner notifications.
 
 - Document how forwarded messages and quoted replies are treated during lead capture; use synthetic updates to accept only the user's explicit text for the current question, ignore forwarded attribution and reply metadata, and avoid persisting third-party identities or advancing the flow on an empty quote.
+
+- Document owner-notification routing when the destination supergroup uses forum topics; use synthetic `message_thread_id` values for valid, closed, deleted, and unavailable topics to keep each lead in the configured thread, fail visibly, and never fall back to an unrelated topic.
