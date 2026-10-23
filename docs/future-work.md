@@ -148,3 +148,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how forwarded messages and quoted replies are treated during lead capture; use synthetic updates to accept only the user's explicit text for the current question, ignore forwarded attribution and reply metadata, and avoid persisting third-party identities or advancing the flow on an empty quote.
 
 - Document owner-notification routing when the destination supergroup uses forum topics; use synthetic `message_thread_id` values for valid, closed, deleted, and unavailable topics to keep each lead in the configured thread, fail visibly, and never fall back to an unrelated topic.
+
+- Document how Telegram media groups are handled during an active lead flow; use synthetic albums with one caption, multiple captions, delayed parts, and unsupported media to define one bounded acknowledgement, preserve message ordering, and avoid advancing the form more than once.
