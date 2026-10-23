@@ -142,3 +142,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how unsupported photos, documents, voice notes, and other attachments are handled during lead capture; use synthetic Telegram updates to specify a text-only clarification prompt, no attachment download or persistence, and no advancement of the five-question flow.
 
 - Document handling of stale or replayed inline-button callbacks from earlier lead-flow steps; use synthetic callback identifiers and conversation versions to specify acknowledgement, a safe restart prompt, and no mutation of the current lead or consent state.
+
+- Document how Telegram edited-message updates affect an in-progress or already submitted lead; use synthetic edits before validation, after consent, and after durable submission to define accepted corrections versus a new-flow prompt without silently rewriting delivered owner notifications.
