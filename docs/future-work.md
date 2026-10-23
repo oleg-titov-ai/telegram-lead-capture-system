@@ -150,3 +150,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-notification routing when the destination supergroup uses forum topics; use synthetic `message_thread_id` values for valid, closed, deleted, and unavailable topics to keep each lead in the configured thread, fail visibly, and never fall back to an unrelated topic.
 
 - Document how Telegram media groups are handled during an active lead flow; use synthetic albums with one caption, multiple captions, delayed parts, and unsupported media to define one bounded acknowledgement, preserve message ordering, and avoid advancing the form more than once.
+
+- Document durable Telegram update-offset handling across process restarts; replay synthetic ordered, duplicate, skipped, and out-of-order `update_id` sequences to checkpoint only after durable state changes, avoid reprocessing submitted leads, and surface gaps without silently advancing past them.
