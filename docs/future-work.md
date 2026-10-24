@@ -154,3 +154,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document durable Telegram update-offset handling across process restarts; replay synthetic ordered, duplicate, skipped, and out-of-order `update_id` sequences to checkpoint only after durable state changes, avoid reprocessing submitted leads, and surface gaps without silently advancing past them.
 
 - Document handling of Telegram `retry_after` responses while acknowledging a lead or notifying its owner; use synthetic short, excessive, repeated, and missing delay values to bound retries, preserve one delivery key, and avoid blocking unrelated conversations or duplicating a submitted lead.
+
+- Document owner-destination migration when Telegram returns `migrate_to_chat_id` for an upgraded group; use synthetic valid, repeated, conflicting, and unavailable migration responses to update the configured destination atomically, preserve one lead-delivery key, and avoid notifying both old and new chats.
