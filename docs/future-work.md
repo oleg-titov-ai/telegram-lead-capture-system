@@ -152,3 +152,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document how Telegram media groups are handled during an active lead flow; use synthetic albums with one caption, multiple captions, delayed parts, and unsupported media to define one bounded acknowledgement, preserve message ordering, and avoid advancing the form more than once.
 
 - Document durable Telegram update-offset handling across process restarts; replay synthetic ordered, duplicate, skipped, and out-of-order `update_id` sequences to checkpoint only after durable state changes, avoid reprocessing submitted leads, and surface gaps without silently advancing past them.
+
+- Document handling of Telegram `retry_after` responses while acknowledging a lead or notifying its owner; use synthetic short, excessive, repeated, and missing delay values to bound retries, preserve one delivery key, and avoid blocking unrelated conversations or duplicating a submitted lead.
