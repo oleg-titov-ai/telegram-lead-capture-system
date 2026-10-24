@@ -158,3 +158,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-destination migration when Telegram returns `migrate_to_chat_id` for an upgraded group; use synthetic valid, repeated, conflicting, and unavailable migration responses to update the configured destination atomically, preserve one lead-delivery key, and avoid notifying both old and new chats.
 
 - Document mutual exclusion between Telegram webhook delivery and long polling during deployment or recovery; use synthetic overlapping, webhook-only, polling-only, and transition states to enforce one active ingestion path, preserve update offsets, and avoid processing the same lead twice.
+
+- Document handling of bidirectional and other invisible Unicode controls in lead fields and owner notifications; use synthetic plain, right-to-left, override, isolate, and zero-width text to preserve the submitted value for audit while rendering a clearly bounded safe preview that cannot disguise field labels or log structure.
