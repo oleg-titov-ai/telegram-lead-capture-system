@@ -164,3 +164,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-notification behavior when the bot loses required rights or is removed from the destination chat; use synthetic authorized, forbidden, not-member, and restored responses to retain one pending delivery key, alert through the documented non-sensitive channel, and avoid repeated sends or fallback to another chat.
 
 - Document deployment checks for Telegram `allowed_updates` changes so newly handled or retired update types do not create silent ingestion gaps; use synthetic old, new, overlapping, and unsupported update sets to verify the active webhook or polling configuration before cutover, preserve the durable offset, and avoid replaying submitted leads.
+
+- Document safe deployment behavior for Telegram `drop_pending_updates`; use synthetic empty, expected-backlog, stale-backlog, and accidental-enable cases to require an explicit reviewed reason, record only update counts and age ranges, and prevent routine restarts from silently discarding unprocessed lead submissions.
