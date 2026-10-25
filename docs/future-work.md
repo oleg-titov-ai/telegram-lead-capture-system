@@ -160,3 +160,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document mutual exclusion between Telegram webhook delivery and long polling during deployment or recovery; use synthetic overlapping, webhook-only, polling-only, and transition states to enforce one active ingestion path, preserve update offsets, and avoid processing the same lead twice.
 
 - Document handling of bidirectional and other invisible Unicode controls in lead fields and owner notifications; use synthetic plain, right-to-left, override, isolate, and zero-width text to preserve the submitted value for audit while rendering a clearly bounded safe preview that cannot disguise field labels or log structure.
+
+- Document owner-notification behavior when the bot loses required rights or is removed from the destination chat; use synthetic authorized, forbidden, not-member, and restored responses to retain one pending delivery key, alert through the documented non-sensitive channel, and avoid repeated sends or fallback to another chat.
