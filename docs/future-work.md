@@ -166,3 +166,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document deployment checks for Telegram `allowed_updates` changes so newly handled or retired update types do not create silent ingestion gaps; use synthetic old, new, overlapping, and unsupported update sets to verify the active webhook or polling configuration before cutover, preserve the durable offset, and avoid replaying submitted leads.
 
 - Document safe deployment behavior for Telegram `drop_pending_updates`; use synthetic empty, expected-backlog, stale-backlog, and accidental-enable cases to require an explicit reviewed reason, record only update counts and age ranges, and prevent routine restarts from silently discarding unprocessed lead submissions.
+
+- Document monitoring and rotation of Telegram webhook TLS certificates before expiry; use synthetic valid, near-expiry, expired, hostname-mismatched, and untrusted-chain states to define alert and cutover behavior, keep pending updates intact, and avoid logging certificate private material or lead payloads.
