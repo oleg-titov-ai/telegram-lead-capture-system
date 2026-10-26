@@ -170,3 +170,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document monitoring and rotation of Telegram webhook TLS certificates before expiry; use synthetic valid, near-expiry, expired, hostname-mismatched, and untrusted-chain states to define alert and cutover behavior, keep pending updates intact, and avoid logging certificate private material or lead payloads.
 
 - Document operational checks for Telegram `getWebhookInfo` fields such as pending update count and last delivery error; use synthetic healthy, growing-backlog, stale-error, and unavailable responses to define alert thresholds and recovery evidence without logging webhook URLs, secret tokens, chat identifiers, or lead payloads.
+
+- Document safe bounds for Telegram webhook `max_connections` and worker concurrency; use synthetic low, expected, excessive, and unavailable capacity settings to define backpressure, per-lead ordering, database connection limits, and rollout checks without replaying updates or exposing lead content.
