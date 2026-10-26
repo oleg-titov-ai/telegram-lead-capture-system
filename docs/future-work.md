@@ -176,3 +176,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document retry and reconciliation behavior for Telegram 5xx, gateway, and malformed API responses; use synthetic transient, repeated, bodyless, invalid-JSON, and recovered responses to bound retries, preserve one update or delivery key, avoid duplicate owner notifications, and keep lead payloads out of diagnostics.
 
 - Document validation of malformed or newly introduced Telegram update shapes before lead processing; use synthetic missing identifiers, wrong field types, unknown update kinds, oversized nesting, and valid updates to acknowledge or quarantine safely, preserve the durable offset policy, and avoid logging raw contact payloads.
+
+- Document owner-notification recovery when a Telegram group is migrated to a supergroup and its chat identifier changes; use synthetic pre-migration, migration-event, duplicate-event, stale-target, and verified-new-target cases to update routing exactly once, preserve lead idempotency, and avoid logging chat identifiers or lead payloads.
