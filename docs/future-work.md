@@ -182,3 +182,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-notification behavior when the bot loses permission to post in the configured Telegram destination; use synthetic allowed, read-only, removed, restored, and ambiguous API responses to preserve accepted leads, suppress duplicate retries, alert without exposing chat identifiers or payloads, and resume only after a verified capability check.
 
 - Document safe owner-notification formatting when lead fields contain Telegram markup characters or message entities; use synthetic plain, escaped, multiline, malformed-entity, and maximum-length values to preserve readable content, fall back to unformatted text on parse rejection, avoid duplicate notifications, and expose no real contact data in fixtures.
+
+- Document validation of Telegram shared-contact messages used for lead details; use synthetic self-owned, third-party, missing-number, oversized-name, malformed, and duplicate contacts to require the documented consent and field rules, preserve one lead identity, and keep phone numbers and user identifiers out of diagnostics.
