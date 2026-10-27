@@ -184,3 +184,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document safe owner-notification formatting when lead fields contain Telegram markup characters or message entities; use synthetic plain, escaped, multiline, malformed-entity, and maximum-length values to preserve readable content, fall back to unformatted text on parse rejection, avoid duplicate notifications, and expose no real contact data in fixtures.
 
 - Document validation of Telegram shared-contact messages used for lead details; use synthetic self-owned, third-party, missing-number, oversized-name, malformed, and duplicate contacts to require the documented consent and field rules, preserve one lead identity, and keep phone numbers and user identifiers out of diagnostics.
+
+- Document handling of voice notes, documents, stickers, and other media received during a text-based lead step; use synthetic supported-text, small-media, oversized-media, unsupported-type, and duplicate-update cases to provide a clear retry prompt, avoid downloading unnecessary content, preserve conversation state, and keep file identifiers out of logs.
