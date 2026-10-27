@@ -188,3 +188,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document handling of voice notes, documents, stickers, and other media received during a text-based lead step; use synthetic supported-text, small-media, oversized-media, unsupported-type, and duplicate-update cases to provide a clear retry prompt, avoid downloading unnecessary content, preserve conversation state, and keep file identifiers out of logs.
 
 - Document behavior when a user edits an earlier Telegram message after the lead flow has advanced; use synthetic pre-step edit, current-step edit, post-submission edit, duplicate edit, and unsupported edit cases to define whether the change is ignored or explicitly reapplied, preserve one lead identity, and avoid duplicate owner notifications.
+
+- Document prompt-language selection from Telegram language metadata; use synthetic supported, region-specific, missing, malformed, and changed-language cases to choose one documented fallback, keep a lead flow on a consistent prompt version, preserve field meaning across languages, and avoid logging user language alongside contact payloads.
