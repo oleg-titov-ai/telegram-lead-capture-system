@@ -180,3 +180,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document owner-notification recovery when a Telegram group is migrated to a supergroup and its chat identifier changes; use synthetic pre-migration, migration-event, duplicate-event, stale-target, and verified-new-target cases to update routing exactly once, preserve lead idempotency, and avoid logging chat identifiers or lead payloads.
 
 - Document owner-notification behavior when the bot loses permission to post in the configured Telegram destination; use synthetic allowed, read-only, removed, restored, and ambiguous API responses to preserve accepted leads, suppress duplicate retries, alert without exposing chat identifiers or payloads, and resume only after a verified capability check.
+
+- Document safe owner-notification formatting when lead fields contain Telegram markup characters or message entities; use synthetic plain, escaped, multiline, malformed-entity, and maximum-length values to preserve readable content, fall back to unformatted text on parse rejection, avoid duplicate notifications, and expose no real contact data in fixtures.
