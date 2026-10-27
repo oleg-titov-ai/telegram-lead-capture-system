@@ -186,3 +186,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document validation of Telegram shared-contact messages used for lead details; use synthetic self-owned, third-party, missing-number, oversized-name, malformed, and duplicate contacts to require the documented consent and field rules, preserve one lead identity, and keep phone numbers and user identifiers out of diagnostics.
 
 - Document handling of voice notes, documents, stickers, and other media received during a text-based lead step; use synthetic supported-text, small-media, oversized-media, unsupported-type, and duplicate-update cases to provide a clear retry prompt, avoid downloading unnecessary content, preserve conversation state, and keep file identifiers out of logs.
+
+- Document behavior when a user edits an earlier Telegram message after the lead flow has advanced; use synthetic pre-step edit, current-step edit, post-submission edit, duplicate edit, and unsupported edit cases to define whether the change is ignored or explicitly reapplied, preserve one lead identity, and avoid duplicate owner notifications.
