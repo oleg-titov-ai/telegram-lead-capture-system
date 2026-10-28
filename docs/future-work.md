@@ -192,3 +192,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document prompt-language selection from Telegram language metadata; use synthetic supported, region-specific, missing, malformed, and changed-language cases to choose one documented fallback, keep a lead flow on a consistent prompt version, preserve field meaning across languages, and avoid logging user language alongside contact payloads.
 
 - Document atomic handling of a `/cancel` or restart command during an active lead conversation; use synthetic empty, partially completed, concurrently submitted, repeated-cancel, and delayed-update cases to clear only the intended session, retain no orphan draft fields, avoid owner notifications for cancelled leads, and start a new flow explicitly.
+
+- Document behavior when a user responds through a stale reply keyboard from an earlier lead-flow version; use synthetic current, previous-version, removed-option, free-text, repeated-tap, and delayed-update cases to map only explicitly compatible choices, request clarification otherwise, preserve one lead identity, and avoid duplicate owner notifications.
