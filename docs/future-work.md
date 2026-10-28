@@ -198,3 +198,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document validation of Telegram deep-link `/start` payloads before they influence a lead flow; use synthetic valid, unknown, expired, oversized, malformed, repeated, and cross-campaign payloads to allow only documented routing, preserve one lead identity, fall back safely, and keep referral values out of logs and owner notifications.
 
 - Document handling of Telegram `my_chat_member` updates when the bot is blocked, removed, restored, or granted new chat permissions; use synthetic private, group, duplicate, reordered, and delayed membership events to stop or resume only documented messaging, preserve lead state safely, and keep chat and user identifiers out of diagnostics.
+
+- Document handling of stale or forged Telegram callback queries from inline lead-flow buttons; use synthetic current, previous-version, unknown-data, expired-message, repeated-tap, and delayed-query cases to accept only documented state transitions, answer callbacks safely, preserve one lead identity, and avoid duplicate owner notifications.
