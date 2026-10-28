@@ -190,3 +190,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document behavior when a user edits an earlier Telegram message after the lead flow has advanced; use synthetic pre-step edit, current-step edit, post-submission edit, duplicate edit, and unsupported edit cases to define whether the change is ignored or explicitly reapplied, preserve one lead identity, and avoid duplicate owner notifications.
 
 - Document prompt-language selection from Telegram language metadata; use synthetic supported, region-specific, missing, malformed, and changed-language cases to choose one documented fallback, keep a lead flow on a consistent prompt version, preserve field meaning across languages, and avoid logging user language alongside contact payloads.
+
+- Document atomic handling of a `/cancel` or restart command during an active lead conversation; use synthetic empty, partially completed, concurrently submitted, repeated-cancel, and delayed-update cases to clear only the intended session, retain no orphan draft fields, avoid owner notifications for cancelled leads, and start a new flow explicitly.
