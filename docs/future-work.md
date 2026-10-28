@@ -194,3 +194,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document atomic handling of a `/cancel` or restart command during an active lead conversation; use synthetic empty, partially completed, concurrently submitted, repeated-cancel, and delayed-update cases to clear only the intended session, retain no orphan draft fields, avoid owner notifications for cancelled leads, and start a new flow explicitly.
 
 - Document behavior when a user responds through a stale reply keyboard from an earlier lead-flow version; use synthetic current, previous-version, removed-option, free-text, repeated-tap, and delayed-update cases to map only explicitly compatible choices, request clarification otherwise, preserve one lead identity, and avoid duplicate owner notifications.
+
+- Document validation of Telegram deep-link `/start` payloads before they influence a lead flow; use synthetic valid, unknown, expired, oversized, malformed, repeated, and cross-campaign payloads to allow only documented routing, preserve one lead identity, fall back safely, and keep referral values out of logs and owner notifications.
