@@ -202,3 +202,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document handling of stale or forged Telegram callback queries from inline lead-flow buttons; use synthetic current, previous-version, unknown-data, expired-message, repeated-tap, and delayed-query cases to accept only documented state transitions, answer callbacks safely, preserve one lead identity, and avoid duplicate owner notifications.
 
 - Document normalization and validation of typed phone numbers before lead submission; use synthetic E.164, local-format, leading-zero, extension-bearing, Unicode-digit, malformed, and boundary-length values to preserve the user's original display value separately, require an unambiguous country context, avoid false identity merges, and keep numbers out of logs.
+
+- Document startup detection of conflicting Telegram webhook and long-polling delivery modes; use synthetic webhook-only, polling-only, both-enabled, stale-webhook, duplicate-update, and unavailable-status cases to select one configured mode, block ambiguous consumption, preserve update idempotency, and keep webhook URLs and tokens out of diagnostics.
