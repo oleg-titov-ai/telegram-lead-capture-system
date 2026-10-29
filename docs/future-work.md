@@ -200,3 +200,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document handling of Telegram `my_chat_member` updates when the bot is blocked, removed, restored, or granted new chat permissions; use synthetic private, group, duplicate, reordered, and delayed membership events to stop or resume only documented messaging, preserve lead state safely, and keep chat and user identifiers out of diagnostics.
 
 - Document handling of stale or forged Telegram callback queries from inline lead-flow buttons; use synthetic current, previous-version, unknown-data, expired-message, repeated-tap, and delayed-query cases to accept only documented state transitions, answer callbacks safely, preserve one lead identity, and avoid duplicate owner notifications.
+
+- Document normalization and validation of typed phone numbers before lead submission; use synthetic E.164, local-format, leading-zero, extension-bearing, Unicode-digit, malformed, and boundary-length values to preserve the user's original display value separately, require an unambiguous country context, avoid false identity merges, and keep numbers out of logs.
