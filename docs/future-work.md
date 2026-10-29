@@ -204,3 +204,5 @@ Maintenance note: document notification retry limits and the safe terminal statu
 - Document normalization and validation of typed phone numbers before lead submission; use synthetic E.164, local-format, leading-zero, extension-bearing, Unicode-digit, malformed, and boundary-length values to preserve the user's original display value separately, require an unambiguous country context, avoid false identity merges, and keep numbers out of logs.
 
 - Document startup detection of conflicting Telegram webhook and long-polling delivery modes; use synthetic webhook-only, polling-only, both-enabled, stale-webhook, duplicate-update, and unavailable-status cases to select one configured mode, block ambiguous consumption, preserve update idempotency, and keep webhook URLs and tokens out of diagnostics.
+
+- Document graceful worker shutdown while Telegram updates are in flight; use synthetic idle, mid-step, database-committed, notification-pending, timeout, duplicate-redelivery, and forced-stop cases to stop accepting new work, finish or abandon at a documented transaction boundary, preserve update idempotency, and avoid duplicate owner notifications after restart.
